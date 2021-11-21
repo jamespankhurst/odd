@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--@@@ ANGULARJS @@@-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!--@@@ END ANGULARJS @@@-->
+    <!--@@@ STYLE SHEETS @@@-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <!--<link rel="stylesheet" href="css/w3.css" />-->
+    <!--@@@  END STYLE SHEETS @@@-->
+    <!--@@@ ICON LIBARIES @@@-->
+    <!-- Font Awesome -->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />-->
+    <!-- Boot Strap -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />-->
+    <!-- Google Icons -->
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />-->
+    <!--<style>.material-icons {vertical-align:-14%}</style>-->
+    <!--@@@ END ICON LIBARIES @@@-->
+  <style>
+    #dice_roll { position: relative; display: block; }
+    #jaend { position: absolute; display: none;}
+    #ja1 { position: absolute; display: none; }
+    #ja2 { position: absolute; display: none; }
+    #ja3 { position: absolute; display: none; }
+    #ja4 { position: absolute; display: none; }
+    #ja5 { position: absolute; display: none; }
+    #ja6 { position: absolute; display: none; }
+    #ja7 { position: absolute; display: none; }
+    #ja8 { position: absolute; display: none; }
+    #ja9 { position: absolute; display: none; }
+    #ja10 { position: absolute; display: none; }
+    #ja11 { position: absolute; display: none; }
+    #ja12 { position: absolute; display: none; }
+    #ja13 { position: absolute; display: none; }
+    #ja14 { position: absolute; display: none; }
+    #ja15 { position: absolute; display: none; }
+    #ja16 { position: absolute; display: none; }
+    #ja17 { position: absolute; display: none; }
+    #ja18 { position: absolute; display: none; }
+    #ja19 { position: absolute; display: none; }
+    #ja20 { position: absolute; display: none; }
+    #ja21 { position: absolute; display: none; }
+    #ja22 { position: absolute; display: none; }
+    #ja23 { position: absolute; display: none; }
+    #ja24 { position: absolute; display: none; }
+    #ja25 { position: absolute; display: none; }
+    #ja26 { position: absolute; display: none; }
+    #ja27 { position: absolute; display: none; }
+    #ja28 { position: absolute; display: none; }
+    #ja29 { position: absolute; display: none; }
+    #ja30 { position: absolute; display: none; }
+    #ja31 { position: absolute; display: none; }
+    #ja32 { position: absolute; display: none; }
+    #ja33 { position: absolute; display: none; }
+    #ja34 { position: absolute; display: none; }
+    #ja35 { position: absolute; display: none; }
+    #ja36 { position: absolute; display: none; }
+    #ja37 { position: absolute; display: none; }
+    #ja38 { position: absolute; display: none; }
+    #ja39 { position: absolute; display: none; }
+    #ja40 { position: absolute; display: none; }
+    #ja41 { position: absolute; display: none; }
+    #ja42 { position: absolute; display: none; }
+    #ja43 { position: absolute; display: none; }
+    #ja44 { position: absolute; display: none; }
+    #ja45 { position: absolute; display: none; }
+    #ja46 { position: absolute; display: none; }
+    #ja47 { position: absolute; display: none; }
+    #ja48 { position: absolute; display: none; }
+    #ja49 { position: absolute; display: none; }
+    #ja50 { position: absolute; display: none; }
+    #ja51 { position: absolute; display: none; }
+    #ja52 { position: absolute; display: none; }
+    #ja53 { position: absolute; display: none; }
+    #ja54 { position: absolute; display: none; }
+    #ja55 { position: absolute; display: none; }
+    #ja56 { position: absolute; display: none; }
+    #ja57 { position: absolute; display: none; }
+    #ja58 { position: absolute; display: none; }
+    #ja59 { position: absolute; display: none; }
+    #ja60 { position: absolute; display: none; }
+  </style>
+  </head>
+  <body>
+    <div id="dice_roll">
+      <div id="ja1"><img src="img\ja\x0\1.png" alt="f1" /></div>
+      <div id="ja2"><img src="img\ja\x0\2.png" alt="f2" /></div>
+      <div id="ja3"><img src="img\ja\x0\3.png" alt="f3" /></div>
+      <div id="ja4"><img src="img\ja\x0\4.png" alt="f4" /></div>
+      <div id="ja5"><img src="img\ja\x0\5.png" alt="f5" /></div>
+      <div id="ja6"><img src="img\ja\x0\6.png" alt="f6" /></div>
+      <div id="ja7"><img src="img\ja\x0\7.png" alt="f7" /></div>
+      <div id="ja8"><img src="img\ja\x0\8.png" alt="f8" /></div>
+      <div id="ja9"><img src="img\ja\x0\9.png" alt="f9" /></div>
+      <div id="ja10"><img src="img\ja\x0\10.png" alt="f10" /></div>
+      <div id="ja11"><img src="img\ja\x0\11.png" alt="f11" /></div>
+      <div id="ja12"><img src="img\ja\x0\12.png" alt="f12" /></div>
+      <div id="ja13"><img src="img\ja\x0\13.png" alt="f13" /></div>
+      <div id="ja14"><img src="img\ja\x0\14.png" alt="f14" /></div>
+      <div id="ja15"><img src="img\ja\x0\15.png" alt="f15" /></div>
+      <div id="ja16"><img src="img\ja\x0\16.png" alt="f16" /></div>
+      <div id="ja17"><img src="img\ja\x0\17.png" alt="f17" /></div>
+      <div id="ja18"><img src="img\ja\x0\18.png" alt="f18" /></div>
+      <div id="ja19"><img src="img\ja\x0\19.png" alt="f19" /></div>
+      <div id="ja20"><img src="img\ja\x0\20.png" alt="f20" /></div>
+      <div id="ja21"><img src="img\ja\x0\21.png" alt="f21" /></div>
+      <div id="ja22"><img src="img\ja\x0\22.png" alt="f22" /></div>
+      <div id="ja23"><img src="img\ja\x0\23.png" alt="f23" /></div>
+      <div id="ja24"><img src="img\ja\x0\24.png" alt="f24" /></div>
+      <div id="ja25"><img src="img\ja\x0\25.png" alt="f25" /></div>
+      <div id="ja26"><img src="img\ja\x0\26.png" alt="f26" /></div>
+      <div id="ja27"><img src="img\ja\x0\27.png" alt="f27" /></div>
+      <div id="ja28"><img src="img\ja\x0\28.png" alt="f28" /></div>
+      <div id="ja29"><img src="img\ja\x0\29.png" alt="f29" /></div>
+      <div id="ja30"><img src="img\ja\x0\30.png" alt="f30" /></div>
+      <div id="ja31"><img src="img\ja\x0\31.png" alt="f31" /></div>
+      <div id="ja32"><img src="img\ja\x0\32.png" alt="f32" /></div>
+      <div id="ja33"><img src="img\ja\x0\33.png" alt="f33" /></div>
+      <div id="ja34"><img src="img\ja\x0\34.png" alt="f34" /></div>
+      <div id="ja35"><img src="img\ja\x0\35.png" alt="f35" /></div>
+      <div id="ja36"><img src="img\ja\x0\36.png" alt="f36" /></div>
+      <div id="ja37"><img src="img\ja\x0\37.png" alt="f37" /></div>
+      <div id="ja38"><img src="img\ja\x0\38.png" alt="f38" /></div>
+      <div id="ja39"><img src="img\ja\x0\39.png" alt="f39" /></div>
+      <div id="ja40"><img src="img\ja\x0\40.png" alt="f40" /></div>
+      <div id="ja41"><img src="img\ja\x0\41.png" alt="f41" /></div>
+      <div id="ja42"><img src="img\ja\x0\42.png" alt="f42" /></div>
+      <div id="ja43"><img src="img\ja\x0\43.png" alt="f43" /></div>
+      <div id="ja44"><img src="img\ja\x0\44.png" alt="f44" /></div>
+      <div id="ja45"><img src="img\ja\x0\45.png" alt="f45" /></div>
+      <div id="ja46"><img src="img\ja\x0\46.png" alt="f46" /></div>
+      <div id="ja47"><img src="img\ja\x0\47.png" alt="f47" /></div>
+      <div id="ja48"><img src="img\ja\x0\48.png" alt="f48" /></div>
+      <div id="ja49"><img src="img\ja\x0\49.png" alt="f49" /></div>
+      <div id="ja50"><img src="img\ja\x0\50.png" alt="f50" /></div>
+      <div id="ja51"><img src="img\ja\x0\51.png" alt="f51" /></div>
+      <div id="ja52"><img src="img\ja\x0\52.png" alt="f52" /></div>
+      <div id="ja53"><img src="img\ja\x0\53.png" alt="f53" /></div>
+      <div id="ja54"><img src="img\ja\x0\54.png" alt="f54" /></div>
+      <div id="ja55"><img src="img\ja\x0\55.png" alt="f55" /></div>
+      <div id="ja56"><img src="img\ja\x0\56.png" alt="f56" /></div>
+      <div id="ja57"><img src="img\ja\x0\57.png" alt="f57" /></div>
+      <div id="ja58"><img src="img\ja\x0\58.png" alt="f58" /></div>
+      <div id="ja59"><img src="img\ja\x0\59.png" alt="f59" /></div>
+      <div id="ja60"><img src="img\ja\x0\60.png" alt="f60" /></div>
+      <div id="jaend"><img src="img\ja\x0\end.png" alt="fend" /></div>
+    </div>
+  </body>
+</html>
