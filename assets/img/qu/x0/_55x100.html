@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--@@@ ANGULARJS @@@-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!--@@@ END ANGULARJS @@@-->
+    <!--@@@ STYLE SHEETS @@@-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <!--<link rel="stylesheet" href="css/w3.css" />-->
+    <!--@@@  END STYLE SHEETS @@@-->
+    <!--@@@ ICON LIBARIES @@@-->
+    <!-- Font Awesome -->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />-->
+    <!-- Boot Strap -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />-->
+    <!-- Google Icons -->
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />-->
+    <!--<style>.material-icons {vertical-align:-14%}</style>-->
+    <!--@@@ END ICON LIBARIES @@@-->
+  <style>
+    #dice_roll { position: relative; display: block; }
+    #quend { position: absolute; display: none;}
+    #qu1 { position: absolute; display: none; }
+    #qu2 { position: absolute; display: none; }
+    #qu3 { position: absolute; display: none; }
+    #qu4 { position: absolute; display: none; }
+    #qu5 { position: absolute; display: none; }
+    #qu6 { position: absolute; display: none; }
+    #qu7 { position: absolute; display: none; }
+    #qu8 { position: absolute; display: none; }
+    #qu9 { position: absolute; display: none; }
+    #qu10 { position: absolute; display: none; }
+    #qu11 { position: absolute; display: none; }
+    #qu12 { position: absolute; display: none; }
+    #qu13 { position: absolute; display: none; }
+    #qu14 { position: absolute; display: none; }
+    #qu15 { position: absolute; display: none; }
+    #qu16 { position: absolute; display: none; }
+    #qu17 { position: absolute; display: none; }
+    #qu18 { position: absolute; display: none; }
+    #qu19 { position: absolute; display: none; }
+    #qu20 { position: absolute; display: none; }
+    #qu21 { position: absolute; display: none; }
+    #qu22 { position: absolute; display: none; }
+    #qu23 { position: absolute; display: none; }
+    #qu24 { position: absolute; display: none; }
+    #qu25 { position: absolute; display: none; }
+    #qu26 { position: absolute; display: none; }
+    #qu27 { position: absolute; display: none; }
+    #qu28 { position: absolute; display: none; }
+    #qu29 { position: absolute; display: none; }
+    #qu30 { position: absolute; display: none; }
+    #qu31 { position: absolute; display: none; }
+    #qu32 { position: absolute; display: none; }
+    #qu33 { position: absolute; display: none; }
+    #qu34 { position: absolute; display: none; }
+    #qu35 { position: absolute; display: none; }
+    #qu36 { position: absolute; display: none; }
+    #qu37 { position: absolute; display: none; }
+    #qu38 { position: absolute; display: none; }
+    #qu39 { position: absolute; display: none; }
+    #qu40 { position: absolute; display: none; }
+    #qu41 { position: absolute; display: none; }
+    #qu42 { position: absolute; display: none; }
+    #qu43 { position: absolute; display: none; }
+    #qu44 { position: absolute; display: none; }
+    #qu45 { position: absolute; display: none; }
+    #qu46 { position: absolute; display: none; }
+    #qu47 { position: absolute; display: none; }
+    #qu48 { position: absolute; display: none; }
+    #qu49 { position: absolute; display: none; }
+    #qu50 { position: absolute; display: none; }
+    #qu51 { position: absolute; display: none; }
+    #qu52 { position: absolute; display: none; }
+    #qu53 { position: absolute; display: none; }
+    #qu54 { position: absolute; display: none; }
+    #qu55 { position: absolute; display: none; }
+    #qu56 { position: absolute; display: none; }
+    #qu57 { position: absolute; display: none; }
+    #qu58 { position: absolute; display: none; }
+    #qu59 { position: absolute; display: none; }
+    #qu60 { position: absolute; display: none; }
+  </style>
+  </head>
+  <body>
+    <div id="dice_roll">
+      <div id="qu1"><img src="img\qu\x0\1.png" alt="f1" /></div>
+      <div id="qu2"><img src="img\qu\x0\2.png" alt="f2" /></div>
+      <div id="qu3"><img src="img\qu\x0\3.png" alt="f3" /></div>
+      <div id="qu4"><img src="img\qu\x0\4.png" alt="f4" /></div>
+      <div id="qu5"><img src="img\qu\x0\5.png" alt="f5" /></div>
+      <div id="qu6"><img src="img\qu\x0\6.png" alt="f6" /></div>
+      <div id="qu7"><img src="img\qu\x0\7.png" alt="f7" /></div>
+      <div id="qu8"><img src="img\qu\x0\8.png" alt="f8" /></div>
+      <div id="qu9"><img src="img\qu\x0\9.png" alt="f9" /></div>
+      <div id="qu10"><img src="img\qu\x0\10.png" alt="f10" /></div>
+      <div id="qu11"><img src="img\qu\x0\11.png" alt="f11" /></div>
+      <div id="qu12"><img src="img\qu\x0\12.png" alt="f12" /></div>
+      <div id="qu13"><img src="img\qu\x0\13.png" alt="f13" /></div>
+      <div id="qu14"><img src="img\qu\x0\14.png" alt="f14" /></div>
+      <div id="qu15"><img src="img\qu\x0\15.png" alt="f15" /></div>
+      <div id="qu16"><img src="img\qu\x0\16.png" alt="f16" /></div>
+      <div id="qu17"><img src="img\qu\x0\17.png" alt="f17" /></div>
+      <div id="qu18"><img src="img\qu\x0\18.png" alt="f18" /></div>
+      <div id="qu19"><img src="img\qu\x0\19.png" alt="f19" /></div>
+      <div id="qu20"><img src="img\qu\x0\20.png" alt="f20" /></div>
+      <div id="qu21"><img src="img\qu\x0\21.png" alt="f21" /></div>
+      <div id="qu22"><img src="img\qu\x0\22.png" alt="f22" /></div>
+      <div id="qu23"><img src="img\qu\x0\23.png" alt="f23" /></div>
+      <div id="qu24"><img src="img\qu\x0\24.png" alt="f24" /></div>
+      <div id="qu25"><img src="img\qu\x0\25.png" alt="f25" /></div>
+      <div id="qu26"><img src="img\qu\x0\26.png" alt="f26" /></div>
+      <div id="qu27"><img src="img\qu\x0\27.png" alt="f27" /></div>
+      <div id="qu28"><img src="img\qu\x0\28.png" alt="f28" /></div>
+      <div id="qu29"><img src="img\qu\x0\29.png" alt="f29" /></div>
+      <div id="qu30"><img src="img\qu\x0\30.png" alt="f30" /></div>
+      <div id="qu31"><img src="img\qu\x0\31.png" alt="f31" /></div>
+      <div id="qu32"><img src="img\qu\x0\32.png" alt="f32" /></div>
+      <div id="qu33"><img src="img\qu\x0\33.png" alt="f33" /></div>
+      <div id="qu34"><img src="img\qu\x0\34.png" alt="f34" /></div>
+      <div id="qu35"><img src="img\qu\x0\35.png" alt="f35" /></div>
+      <div id="qu36"><img src="img\qu\x0\36.png" alt="f36" /></div>
+      <div id="qu37"><img src="img\qu\x0\37.png" alt="f37" /></div>
+      <div id="qu38"><img src="img\qu\x0\38.png" alt="f38" /></div>
+      <div id="qu39"><img src="img\qu\x0\39.png" alt="f39" /></div>
+      <div id="qu40"><img src="img\qu\x0\40.png" alt="f40" /></div>
+      <div id="qu41"><img src="img\qu\x0\41.png" alt="f41" /></div>
+      <div id="qu42"><img src="img\qu\x0\42.png" alt="f42" /></div>
+      <div id="qu43"><img src="img\qu\x0\43.png" alt="f43" /></div>
+      <div id="qu44"><img src="img\qu\x0\44.png" alt="f44" /></div>
+      <div id="qu45"><img src="img\qu\x0\45.png" alt="f45" /></div>
+      <div id="qu46"><img src="img\qu\x0\46.png" alt="f46" /></div>
+      <div id="qu47"><img src="img\qu\x0\47.png" alt="f47" /></div>
+      <div id="qu48"><img src="img\qu\x0\48.png" alt="f48" /></div>
+      <div id="qu49"><img src="img\qu\x0\49.png" alt="f49" /></div>
+      <div id="qu50"><img src="img\qu\x0\50.png" alt="f50" /></div>
+      <div id="qu51"><img src="img\qu\x0\51.png" alt="f51" /></div>
+      <div id="qu52"><img src="img\qu\x0\52.png" alt="f52" /></div>
+      <div id="qu53"><img src="img\qu\x0\53.png" alt="f53" /></div>
+      <div id="qu54"><img src="img\qu\x0\54.png" alt="f54" /></div>
+      <div id="qu55"><img src="img\qu\x0\55.png" alt="f55" /></div>
+      <div id="qu56"><img src="img\qu\x0\56.png" alt="f56" /></div>
+      <div id="qu57"><img src="img\qu\x0\57.png" alt="f57" /></div>
+      <div id="qu58"><img src="img\qu\x0\58.png" alt="f58" /></div>
+      <div id="qu59"><img src="img\qu\x0\59.png" alt="f59" /></div>
+      <div id="qu60"><img src="img\qu\x0\60.png" alt="f60" /></div>
+      <div id="quend"><img src="img\qu\x0\end.png" alt="fend" /></div>
+    </div>
+  </body>
+</html>

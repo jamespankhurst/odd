@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--@@@ ANGULARJS @@@-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!--@@@ END ANGULARJS @@@-->
+    <!--@@@ STYLE SHEETS @@@-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <!--<link rel="stylesheet" href="css/w3.css" />-->
+    <!--@@@  END STYLE SHEETS @@@-->
+    <!--@@@ ICON LIBARIES @@@-->
+    <!-- Font Awesome -->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />-->
+    <!-- Boot Strap -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />-->
+    <!-- Google Icons -->
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />-->
+    <!--<style>.material-icons {vertical-align:-14%}</style>-->
+    <!--@@@ END ICON LIBARIES @@@-->
+  <style>
+    #dice_roll { position: relative; display: block; }
+    #teend { position: absolute; display: none;}
+    #te1 { position: absolute; display: none; }
+    #te2 { position: absolute; display: none; }
+    #te3 { position: absolute; display: none; }
+    #te4 { position: absolute; display: none; }
+    #te5 { position: absolute; display: none; }
+    #te6 { position: absolute; display: none; }
+    #te7 { position: absolute; display: none; }
+    #te8 { position: absolute; display: none; }
+    #te9 { position: absolute; display: none; }
+    #te10 { position: absolute; display: none; }
+    #te11 { position: absolute; display: none; }
+    #te12 { position: absolute; display: none; }
+    #te13 { position: absolute; display: none; }
+    #te14 { position: absolute; display: none; }
+    #te15 { position: absolute; display: none; }
+    #te16 { position: absolute; display: none; }
+    #te17 { position: absolute; display: none; }
+    #te18 { position: absolute; display: none; }
+    #te19 { position: absolute; display: none; }
+    #te20 { position: absolute; display: none; }
+    #te21 { position: absolute; display: none; }
+    #te22 { position: absolute; display: none; }
+    #te23 { position: absolute; display: none; }
+    #te24 { position: absolute; display: none; }
+    #te25 { position: absolute; display: none; }
+    #te26 { position: absolute; display: none; }
+    #te27 { position: absolute; display: none; }
+    #te28 { position: absolute; display: none; }
+    #te29 { position: absolute; display: none; }
+    #te30 { position: absolute; display: none; }
+    #te31 { position: absolute; display: none; }
+    #te32 { position: absolute; display: none; }
+    #te33 { position: absolute; display: none; }
+    #te34 { position: absolute; display: none; }
+    #te35 { position: absolute; display: none; }
+    #te36 { position: absolute; display: none; }
+    #te37 { position: absolute; display: none; }
+    #te38 { position: absolute; display: none; }
+    #te39 { position: absolute; display: none; }
+    #te40 { position: absolute; display: none; }
+    #te41 { position: absolute; display: none; }
+    #te42 { position: absolute; display: none; }
+    #te43 { position: absolute; display: none; }
+    #te44 { position: absolute; display: none; }
+    #te45 { position: absolute; display: none; }
+    #te46 { position: absolute; display: none; }
+    #te47 { position: absolute; display: none; }
+    #te48 { position: absolute; display: none; }
+    #te49 { position: absolute; display: none; }
+    #te50 { position: absolute; display: none; }
+    #te51 { position: absolute; display: none; }
+    #te52 { position: absolute; display: none; }
+    #te53 { position: absolute; display: none; }
+    #te54 { position: absolute; display: none; }
+    #te55 { position: absolute; display: none; }
+    #te56 { position: absolute; display: none; }
+    #te57 { position: absolute; display: none; }
+    #te58 { position: absolute; display: none; }
+    #te59 { position: absolute; display: none; }
+    #te60 { position: absolute; display: none; }
+  </style>
+  </head>
+  <body>
+    <div id="dice_roll">
+      <div id="te1"><img src="img\te\x0\1.png" alt="f1" /></div>
+      <div id="te2"><img src="img\te\x0\2.png" alt="f2" /></div>
+      <div id="te3"><img src="img\te\x0\3.png" alt="f3" /></div>
+      <div id="te4"><img src="img\te\x0\4.png" alt="f4" /></div>
+      <div id="te5"><img src="img\te\x0\5.png" alt="f5" /></div>
+      <div id="te6"><img src="img\te\x0\6.png" alt="f6" /></div>
+      <div id="te7"><img src="img\te\x0\7.png" alt="f7" /></div>
+      <div id="te8"><img src="img\te\x0\8.png" alt="f8" /></div>
+      <div id="te9"><img src="img\te\x0\9.png" alt="f9" /></div>
+      <div id="te10"><img src="img\te\x0\10.png" alt="f10" /></div>
+      <div id="te11"><img src="img\te\x0\11.png" alt="f11" /></div>
+      <div id="te12"><img src="img\te\x0\12.png" alt="f12" /></div>
+      <div id="te13"><img src="img\te\x0\13.png" alt="f13" /></div>
+      <div id="te14"><img src="img\te\x0\14.png" alt="f14" /></div>
+      <div id="te15"><img src="img\te\x0\15.png" alt="f15" /></div>
+      <div id="te16"><img src="img\te\x0\16.png" alt="f16" /></div>
+      <div id="te17"><img src="img\te\x0\17.png" alt="f17" /></div>
+      <div id="te18"><img src="img\te\x0\18.png" alt="f18" /></div>
+      <div id="te19"><img src="img\te\x0\19.png" alt="f19" /></div>
+      <div id="te20"><img src="img\te\x0\20.png" alt="f20" /></div>
+      <div id="te21"><img src="img\te\x0\21.png" alt="f21" /></div>
+      <div id="te22"><img src="img\te\x0\22.png" alt="f22" /></div>
+      <div id="te23"><img src="img\te\x0\23.png" alt="f23" /></div>
+      <div id="te24"><img src="img\te\x0\24.png" alt="f24" /></div>
+      <div id="te25"><img src="img\te\x0\25.png" alt="f25" /></div>
+      <div id="te26"><img src="img\te\x0\26.png" alt="f26" /></div>
+      <div id="te27"><img src="img\te\x0\27.png" alt="f27" /></div>
+      <div id="te28"><img src="img\te\x0\28.png" alt="f28" /></div>
+      <div id="te29"><img src="img\te\x0\29.png" alt="f29" /></div>
+      <div id="te30"><img src="img\te\x0\30.png" alt="f30" /></div>
+      <div id="te31"><img src="img\te\x0\31.png" alt="f31" /></div>
+      <div id="te32"><img src="img\te\x0\32.png" alt="f32" /></div>
+      <div id="te33"><img src="img\te\x0\33.png" alt="f33" /></div>
+      <div id="te34"><img src="img\te\x0\34.png" alt="f34" /></div>
+      <div id="te35"><img src="img\te\x0\35.png" alt="f35" /></div>
+      <div id="te36"><img src="img\te\x0\36.png" alt="f36" /></div>
+      <div id="te37"><img src="img\te\x0\37.png" alt="f37" /></div>
+      <div id="te38"><img src="img\te\x0\38.png" alt="f38" /></div>
+      <div id="te39"><img src="img\te\x0\39.png" alt="f39" /></div>
+      <div id="te40"><img src="img\te\x0\40.png" alt="f40" /></div>
+      <div id="te41"><img src="img\te\x0\41.png" alt="f41" /></div>
+      <div id="te42"><img src="img\te\x0\42.png" alt="f42" /></div>
+      <div id="te43"><img src="img\te\x0\43.png" alt="f43" /></div>
+      <div id="te44"><img src="img\te\x0\44.png" alt="f44" /></div>
+      <div id="te45"><img src="img\te\x0\45.png" alt="f45" /></div>
+      <div id="te46"><img src="img\te\x0\46.png" alt="f46" /></div>
+      <div id="te47"><img src="img\te\x0\47.png" alt="f47" /></div>
+      <div id="te48"><img src="img\te\x0\48.png" alt="f48" /></div>
+      <div id="te49"><img src="img\te\x0\49.png" alt="f49" /></div>
+      <div id="te50"><img src="img\te\x0\50.png" alt="f50" /></div>
+      <div id="te51"><img src="img\te\x0\51.png" alt="f51" /></div>
+      <div id="te52"><img src="img\te\x0\52.png" alt="f52" /></div>
+      <div id="te53"><img src="img\te\x0\53.png" alt="f53" /></div>
+      <div id="te54"><img src="img\te\x0\54.png" alt="f54" /></div>
+      <div id="te55"><img src="img\te\x0\55.png" alt="f55" /></div>
+      <div id="te56"><img src="img\te\x0\56.png" alt="f56" /></div>
+      <div id="te57"><img src="img\te\x0\57.png" alt="f57" /></div>
+      <div id="te58"><img src="img\te\x0\58.png" alt="f58" /></div>
+      <div id="te59"><img src="img\te\x0\59.png" alt="f59" /></div>
+      <div id="te60"><img src="img\te\x0\60.png" alt="f60" /></div>
+      <div id="teend"><img src="img\te\x0\end.png" alt="fend" /></div>
+    </div>
+  </body>
+</html>

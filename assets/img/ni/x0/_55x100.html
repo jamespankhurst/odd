@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--@@@ ANGULARJS @@@-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!--@@@ END ANGULARJS @@@-->
+    <!--@@@ STYLE SHEETS @@@-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <!--<link rel="stylesheet" href="css/w3.css" />-->
+    <!--@@@  END STYLE SHEETS @@@-->
+    <!--@@@ ICON LIBARIES @@@-->
+    <!-- Font Awesome -->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />-->
+    <!-- Boot Strap -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />-->
+    <!-- Google Icons -->
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />-->
+    <!--<style>.material-icons {vertical-align:-14%}</style>-->
+    <!--@@@ END ICON LIBARIES @@@-->
+  <style>
+    #dice_roll { position: relative; display: block; }
+    #niend { position: absolute; display: none;}
+    #ni1 { position: absolute; display: none; }
+    #ni2 { position: absolute; display: none; }
+    #ni3 { position: absolute; display: none; }
+    #ni4 { position: absolute; display: none; }
+    #ni5 { position: absolute; display: none; }
+    #ni6 { position: absolute; display: none; }
+    #ni7 { position: absolute; display: none; }
+    #ni8 { position: absolute; display: none; }
+    #ni9 { position: absolute; display: none; }
+    #ni10 { position: absolute; display: none; }
+    #ni11 { position: absolute; display: none; }
+    #ni12 { position: absolute; display: none; }
+    #ni13 { position: absolute; display: none; }
+    #ni14 { position: absolute; display: none; }
+    #ni15 { position: absolute; display: none; }
+    #ni16 { position: absolute; display: none; }
+    #ni17 { position: absolute; display: none; }
+    #ni18 { position: absolute; display: none; }
+    #ni19 { position: absolute; display: none; }
+    #ni20 { position: absolute; display: none; }
+    #ni21 { position: absolute; display: none; }
+    #ni22 { position: absolute; display: none; }
+    #ni23 { position: absolute; display: none; }
+    #ni24 { position: absolute; display: none; }
+    #ni25 { position: absolute; display: none; }
+    #ni26 { position: absolute; display: none; }
+    #ni27 { position: absolute; display: none; }
+    #ni28 { position: absolute; display: none; }
+    #ni29 { position: absolute; display: none; }
+    #ni30 { position: absolute; display: none; }
+    #ni31 { position: absolute; display: none; }
+    #ni32 { position: absolute; display: none; }
+    #ni33 { position: absolute; display: none; }
+    #ni34 { position: absolute; display: none; }
+    #ni35 { position: absolute; display: none; }
+    #ni36 { position: absolute; display: none; }
+    #ni37 { position: absolute; display: none; }
+    #ni38 { position: absolute; display: none; }
+    #ni39 { position: absolute; display: none; }
+    #ni40 { position: absolute; display: none; }
+    #ni41 { position: absolute; display: none; }
+    #ni42 { position: absolute; display: none; }
+    #ni43 { position: absolute; display: none; }
+    #ni44 { position: absolute; display: none; }
+    #ni45 { position: absolute; display: none; }
+    #ni46 { position: absolute; display: none; }
+    #ni47 { position: absolute; display: none; }
+    #ni48 { position: absolute; display: none; }
+    #ni49 { position: absolute; display: none; }
+    #ni50 { position: absolute; display: none; }
+    #ni51 { position: absolute; display: none; }
+    #ni52 { position: absolute; display: none; }
+    #ni53 { position: absolute; display: none; }
+    #ni54 { position: absolute; display: none; }
+    #ni55 { position: absolute; display: none; }
+    #ni56 { position: absolute; display: none; }
+    #ni57 { position: absolute; display: none; }
+    #ni58 { position: absolute; display: none; }
+    #ni59 { position: absolute; display: none; }
+    #ni60 { position: absolute; display: none; }
+  </style>
+  </head>
+  <body>
+    <div id="dice_roll">
+      <div id="ni1"><img src="img\ni\x0\1.png" alt="f1" /></div>
+      <div id="ni2"><img src="img\ni\x0\2.png" alt="f2" /></div>
+      <div id="ni3"><img src="img\ni\x0\3.png" alt="f3" /></div>
+      <div id="ni4"><img src="img\ni\x0\4.png" alt="f4" /></div>
+      <div id="ni5"><img src="img\ni\x0\5.png" alt="f5" /></div>
+      <div id="ni6"><img src="img\ni\x0\6.png" alt="f6" /></div>
+      <div id="ni7"><img src="img\ni\x0\7.png" alt="f7" /></div>
+      <div id="ni8"><img src="img\ni\x0\8.png" alt="f8" /></div>
+      <div id="ni9"><img src="img\ni\x0\9.png" alt="f9" /></div>
+      <div id="ni10"><img src="img\ni\x0\10.png" alt="f10" /></div>
+      <div id="ni11"><img src="img\ni\x0\11.png" alt="f11" /></div>
+      <div id="ni12"><img src="img\ni\x0\12.png" alt="f12" /></div>
+      <div id="ni13"><img src="img\ni\x0\13.png" alt="f13" /></div>
+      <div id="ni14"><img src="img\ni\x0\14.png" alt="f14" /></div>
+      <div id="ni15"><img src="img\ni\x0\15.png" alt="f15" /></div>
+      <div id="ni16"><img src="img\ni\x0\16.png" alt="f16" /></div>
+      <div id="ni17"><img src="img\ni\x0\17.png" alt="f17" /></div>
+      <div id="ni18"><img src="img\ni\x0\18.png" alt="f18" /></div>
+      <div id="ni19"><img src="img\ni\x0\19.png" alt="f19" /></div>
+      <div id="ni20"><img src="img\ni\x0\20.png" alt="f20" /></div>
+      <div id="ni21"><img src="img\ni\x0\21.png" alt="f21" /></div>
+      <div id="ni22"><img src="img\ni\x0\22.png" alt="f22" /></div>
+      <div id="ni23"><img src="img\ni\x0\23.png" alt="f23" /></div>
+      <div id="ni24"><img src="img\ni\x0\24.png" alt="f24" /></div>
+      <div id="ni25"><img src="img\ni\x0\25.png" alt="f25" /></div>
+      <div id="ni26"><img src="img\ni\x0\26.png" alt="f26" /></div>
+      <div id="ni27"><img src="img\ni\x0\27.png" alt="f27" /></div>
+      <div id="ni28"><img src="img\ni\x0\28.png" alt="f28" /></div>
+      <div id="ni29"><img src="img\ni\x0\29.png" alt="f29" /></div>
+      <div id="ni30"><img src="img\ni\x0\30.png" alt="f30" /></div>
+      <div id="ni31"><img src="img\ni\x0\31.png" alt="f31" /></div>
+      <div id="ni32"><img src="img\ni\x0\32.png" alt="f32" /></div>
+      <div id="ni33"><img src="img\ni\x0\33.png" alt="f33" /></div>
+      <div id="ni34"><img src="img\ni\x0\34.png" alt="f34" /></div>
+      <div id="ni35"><img src="img\ni\x0\35.png" alt="f35" /></div>
+      <div id="ni36"><img src="img\ni\x0\36.png" alt="f36" /></div>
+      <div id="ni37"><img src="img\ni\x0\37.png" alt="f37" /></div>
+      <div id="ni38"><img src="img\ni\x0\38.png" alt="f38" /></div>
+      <div id="ni39"><img src="img\ni\x0\39.png" alt="f39" /></div>
+      <div id="ni40"><img src="img\ni\x0\40.png" alt="f40" /></div>
+      <div id="ni41"><img src="img\ni\x0\41.png" alt="f41" /></div>
+      <div id="ni42"><img src="img\ni\x0\42.png" alt="f42" /></div>
+      <div id="ni43"><img src="img\ni\x0\43.png" alt="f43" /></div>
+      <div id="ni44"><img src="img\ni\x0\44.png" alt="f44" /></div>
+      <div id="ni45"><img src="img\ni\x0\45.png" alt="f45" /></div>
+      <div id="ni46"><img src="img\ni\x0\46.png" alt="f46" /></div>
+      <div id="ni47"><img src="img\ni\x0\47.png" alt="f47" /></div>
+      <div id="ni48"><img src="img\ni\x0\48.png" alt="f48" /></div>
+      <div id="ni49"><img src="img\ni\x0\49.png" alt="f49" /></div>
+      <div id="ni50"><img src="img\ni\x0\50.png" alt="f50" /></div>
+      <div id="ni51"><img src="img\ni\x0\51.png" alt="f51" /></div>
+      <div id="ni52"><img src="img\ni\x0\52.png" alt="f52" /></div>
+      <div id="ni53"><img src="img\ni\x0\53.png" alt="f53" /></div>
+      <div id="ni54"><img src="img\ni\x0\54.png" alt="f54" /></div>
+      <div id="ni55"><img src="img\ni\x0\55.png" alt="f55" /></div>
+      <div id="ni56"><img src="img\ni\x0\56.png" alt="f56" /></div>
+      <div id="ni57"><img src="img\ni\x0\57.png" alt="f57" /></div>
+      <div id="ni58"><img src="img\ni\x0\58.png" alt="f58" /></div>
+      <div id="ni59"><img src="img\ni\x0\59.png" alt="f59" /></div>
+      <div id="ni60"><img src="img\ni\x0\60.png" alt="f60" /></div>
+      <div id="niend"><img src="img\ni\x0\end.png" alt="fend" /></div>
+    </div>
+  </body>
+</html>
