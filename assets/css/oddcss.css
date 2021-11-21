@@ -1,0 +1,769 @@
+/*==============================*/
+/*===== ORION DICE DECIDE ======*/
+/* www.jamespankhurst.co.uk/odd */
+/* jamespankhurst180@gmail.com  */
+/* github.com/jamespankhurst    */
+/* gitlab.com/jamespankhurst180 */
+/*==============================*/
+
+#loading_bar{
+	display: block; 
+	position: absolute; 
+	top: 10px; 
+	left: 10px; 
+}
+
+/*-- MAIN CONTAINERS --*/
+.flex-container { 
+	display: flex; 
+	flex-wrap: wrap; 
+	flex-direction: column; 
+	justify-content: center; 
+	align-items: center; 
+}
+.flex-container > #page-container { 
+	display: block; 
+	position: relative; 
+	top: 0px; 
+	left: 0px; 
+	width: 360px; 
+	height: 470px; 
+}
+.flex-container > #arena-container { 
+	display: block; 
+	position: absolute; 
+	top: 0px; 
+	left: 0px; 
+	width: 360px; 
+	height: 470px; 
+	} 
+
+#i_eyehorus {
+display: block;
+position: absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 120px;
+border: 0px solid #fff;
+}
+#i_ey_ani_1 { display: block; position: absolute; top: 160px; left: 0px; width: 100%; }
+
+#i_orionbelt {
+display: block;
+position: absolute;
+top: 120px;
+left: 0px;
+width: 100%;
+height: 120px;
+border: 0px solid pink;
+}
+#i_or_ani_1 { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 120px; }
+#i_or_ani_2 { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 100px; }
+
+#i_dice-shaker {
+display: block;
+position: absolute;
+top: 240px;
+left: 0px;
+width: 100%;
+height: 80px;
+border: 0px solid red;
+}
+#i_sh_ani_1 { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 80px; }
+#i_sh_ani_2 { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 80px; }
+
+#i_dice-holder {
+display: block;
+position: absolute;
+top: 320px;
+left: 0px;
+width: 100%;
+height: 80px;
+border: 0px solid #fff;
+}
+#i_ho_ani_1 { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 80px; }
+#i_ho_ani_2 { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 80px; }
+
+
+
+#i_pyramidbelt {
+display: none;
+position: absolute;
+top: 400px;
+left: 0px;
+width: 100%;
+height: 70px;
+border: 0px solid green;
+}
+#i_py_ani_1 { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 120px; }
+#i_py_ani_2 { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 120px; }
+
+
+#orion { 
+	display: block; 
+	position: absolute; 
+	top: 0px; 
+	left: 0px; 
+	width: 100%; 
+	height: 150px; 
+	border: 0px solid green; 
+}
+#e_orion { 
+	display: block; 
+	position: absolute; 
+	top: 0px; 
+	left: 0px; 
+	width: 100%; 
+	height: 150px; 
+	border: 0px solid green; 
+}
+#asteriod { 
+	display: block; 
+	position: absolute; 
+	top: 150px; 
+	left: 0px; 
+	width: 100%; 
+	height: 200px; 
+	padding: 0px; 
+	border: 0px solid #fff; 
+}
+#e_asteriod { 
+	display: block; 
+	position: absolute; 
+	top: 150px; 
+	left: 0px; 
+	width: 100%; 
+	height: 200px; 
+	padding: 0px; 
+	border: 0px solid #fff; 
+}
+
+#pyramid { 
+	display: block; 
+	position: absolute; 
+	top: 350px; 
+	left: 0px; 
+	width: 100%; 
+	height: 120px; 
+	border: 0px solid green; 
+}
+
+#e_pyramid { 
+	display: block; 
+	position: absolute; 
+	top: 350px; 
+	left: 0px; 
+	width: 100%; 
+	height: 120px; 
+	border: 0px solid green; 
+}
+
+#asteriod2 { 
+	display: block; 
+	position: absolute; 
+	top: 150px; 
+	left: 0px; 
+	width: 100%; 
+	height: 200px; 
+	padding: 0px; 
+	border: 0px solid #fff; 
+}
+
+#comm_panel { 
+	display: block; 
+	position: absolute; 
+	top: 150px; 
+	left: 0px; 
+	width: 100%; 
+	height: 200px; 
+	padding: 0px; 
+	border: 0px solid #fff; 
+	}
+
+#hold_panel { 
+	display: none; 
+	position: absolute; 
+	top: 260px; 
+	left: 45px; 
+	width: 300px; 
+	height: 100px; 
+	opacity: 1.0; 
+	padding: 10px; 
+	border: 0px solid pink; 
+	}
+
+
+
+#ctrl-panel { 
+	display: none; 
+	position: absolute; 
+	top: 410px; 
+	left: 0px; 
+	}
+
+#button_panel {
+	display: none; 
+	position: absolute; 
+	top: 320px; 
+	left: 140px; 
+}
+#i_button_panel {
+	display: none; 
+	position: absolute; 
+	top: 400px; 
+	left: 140px; 
+}
+
+#start-button { 
+	display: inline-block; 
+	position: relative; 
+	}
+#round-panel { 
+	display: inline-block; 
+	position: relative; 
+	}
+#round-number { 
+	display: inline-block; 
+	position: relative; 
+	}
+#dealer-panel { 
+	display: inline-block; 
+	position: relative; 
+	}
+#dwins { 
+	display: inline-block; 
+	position: relative; 
+	}
+
+#player-panel { 
+	display: inline-block; 
+	position: relative; 
+	}
+#pwins { 
+	display: inline-block; 
+	position: relative; 
+	}
+
+#comms-panel { 
+	display: block; 
+	position: absolute;
+	top: 0px; 
+	left: 0px; 
+	width: 360px; 
+	height: 60px; 
+	border: 0px solid pink;
+	}
+
+#dscore { 
+	display: block; 
+	position: absolute;
+	top: 130px; 
+	left: 0px; 
+	width: 360px; 
+	height: 40px; 
+	}
+#pscore { 
+	display: block; 
+	position: absolute;
+	top: 130px; 
+	left: 0px; 
+	width: 360px; 
+	height: 40px; 
+	}
+
+#dlast {
+	display: block; 
+	position: absolute;
+	top: 150px; 
+	left: 120px; 
+	//width: 260px; 
+	//height: 40px; 
+}
+#qlast{
+	display: block; 
+	position: absolute;
+	top: 150px; 
+	left: 120px; 
+	//width: 260px; 
+	//height: 40px; 
+}
+
+/*------------------*/
+/*--- HAND-PANEL ---*/
+/*------------------*/
+#hand_panel { 
+display: none; 
+position: absolute; 
+opacity: 1.0;
+top: 0px; 
+left: 0px; 
+}
+
+.hand_container {
+display: grid;
+float: right;
+justify-content: start;
+align-content: right;
+grid-template-columns: auto;
+grid-column-gap: 0px;
+grid-template-rows: auto auto auto auto auto auto auto;
+grid-rows-gap: 0px;
+padding-left: 0px;
+padding-top: 0px;
+color: #fff;
+max-width: 90px;
+border: 0px solid pink;
+margin-bottom: 20px;
+}
+.hand_container > div {
+text-align: left;
+font-size: 8px;
+color: #fff; 
+}
+#K5 { display: block; float: left; padding-right: 2px; color: #fff; }
+#K4 { display: block; float: left; padding-right: 2px; color: #fff; }
+#FH { display: block; float: left; padding-right: 2px; color: #fff; }
+#K3 { display: block; float: left; padding-right: 2px; color: #fff; }
+#P2 { display: block; float: left; padding-right: 2px; color: #fff; }
+#P1 { display: block; float: left; padding-right: 2px; color: #fff; }
+#HC { display: block; float: left; padding-right: 2px; color: #fff; }
+
+/*--------------------------*/
+/*--- END HAND-PANEL ---*/
+/*--------------------------*/
+
+/* ================================== */
+/* @@@ VIB-CONTAINERS @@@ */
+/* ================================== */
+
+#vibe_panel { 
+display: block; 
+position: absolute; 
+opacity: 1.0;
+top: 90px; 
+left: 0px;  
+}
+
+.vib-container{
+display: grid;
+justify-content: start;
+align-content: center;
+grid-template-columns: 42px 4px 32px;
+grid-column-gap: 0px;
+grid-template-rows: auto, auto;
+grid-rows-gap: 0px;
+max-width: 100px;
+padding-left: 2px;
+border: 0px solid #999;
+position: relative;
+}
+/* VIBEO TEXT */
+#vib-txt{
+display: inline;
+border: 0px solid #fff;
+font-size: 8px;
+font-style: italic;
+padding: 0px;
+color: #fff;
+text-transform: capitalize;
+}
+/* VIBEO RULER */
+#vib-ruler-left{
+display: inline;
+max-width: 30px;
+font-size: 8px;
+line-height: 12px;
+padding-right: 0px;
+color: #fff;
+background-color: #000;
+}
+#vib-ruler-right{
+display: inline;
+max-width: 30px;
+font-size: 8px;
+line-height: 12px;
+padding: 0px;
+color: #fff;
+background-color: #000;
+}
+.vibslider{
+font-size: 10px;
+line-height: 10px;
+display: inline;
+width: 4px
+max-width: 50px;
+height: 10px;
+background-color: #66ccff;
+border: 0px solid #fff;
+position: relative;
+}
+#vibneedle{
+display: inline;
+color: #fff;
+width: 4px;
+max-width: 30px;
+height: 10px;
+padding: 0px;
+position: absolute;
+background-color: #66ccff;
+border: 0px solid #fff;
+}
+
+/*---- ROLLING DICE IN ORION_STAGE 0-150px----*/
+#d1 { display: inline-block; position: absolute; width: 60px; height: 100px; top: 20px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid red; }
+#d2 { display: inline-block; position: absolute; width: 60px; height: 100px; top: 20px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid red; }
+#d3 { display: inline-block; position: absolute; width: 60px; height: 100px; top: 20px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid red; }
+#d4 { display: inline-block; position: absolute; width: 60px; height: 100px; top: 20px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid red; }
+#d5 { display: inline-block; position: absolute; width: 60px; height: 100px; top: 20px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid red; }
+
+#d1r1 { display: inline-block; position: absolute; width: 60px; height: 100px; top: 20px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid red; }
+#d2r1 { display: inline-block; position: absolute; width: 60px; height: 100px; top: 20px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid red; }
+#d3r1 { display: inline-block; position: absolute; width: 60px; height: 100px; top: 20px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid red; }
+#d4r1 { display: inline-block; position: absolute; width: 60px; height: 100px; top: 20px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid red; }
+#d5r1 { display: inline-block; position: absolute; width: 60px; height: 100px; top: 20px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid red; }
+
+#d1r2 { display: inline-block; position: absolute; width: 60px; height: 100px; top: 20px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid pink; }
+#d2r2 { display: inline-block; position: absolute; width: 60px; height: 100px; top: 20px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid pink; }
+#d3r2 { display: inline-block; position: absolute; width: 60px; height: 100px; top: 20px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid pink; }
+#d4r2 { display: inline-block; position: absolute; width: 60px; height: 100px; top: 20px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid pink; }
+#d5r2 { display: inline-block; position: absolute; width: 60px; height: 100px; top: 20px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid pink; }
+
+/*---- DECIDE DICE IN ASTERIOD 150-350px----*/
+#d1d1 { display: none; position: absolute; width: 60px; height: 100px; top: 40px; left: 45px; opacity: 1.0; padding: 0px; border: 0px solid green; }
+#d2d1 { display: none; position: absolute; width: 60px; height: 100px; top: 40px; left: 285px; opacity: 1.0; padding: 0px; border: 0px solid green; }
+#d3d1 { display: none; position: absolute; width: 60px; height: 100px; top: 40px; left: 105px; opacity: 1.0; padding: 0x; border: 0px solid green; }
+#d4d1 { display: none; position: absolute; width: 60px; height: 100px; top: 40px; left: 225px; opacity: 1.0; padding: 0px; border: 0px solid green; }
+#d5d1 { display: none; position: absolute; width: 60px; height: 100px; top: 40px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid green; }
+
+#d1d2 { display: none; position: absolute; width: 60px; height: 100px; top: 40px; left: 45px; opacity: 1.0; padding: 0px; border: 0px solid blue; }
+#d2d2 { display: none; position: absolute; width: 60px; height: 100px; top: 40px; left: 285px; opacity: 1.0; padding: 0px; border: 0px solid blue; }
+#d3d2 { display: none; position: absolute; width: 60px; height: 100px; top: 40px; left: 105px; opacity: 1.0; padding: 0px; border: 0px solid blue; }
+#d4d2 { display: none; position: absolute; width: 60px; height: 100px; top: 40px; left: 225px; opacity: 1.0; padding: 0px; border: 0px solid blue; }
+#d5d2 { display: none; position: absolute; width: 60px; height: 100px; top: 40px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid blue; }
+
+/*--- HOLD DICE IN HOLD_PANEL 250-100px---*/
+#d1h { display: inline-block; position: absolute; width: 50px; height: 100px; top: 140px; left: 45px; opacity: 1.0; padding: 0px; border: 0px solid yellow; }
+#d2h { display: inline-block; position: absolute; width: 50px; height: 100px; top: 140px; left: 285px; opacity: 1.0; padding: 0px; border: 0px solid yellow; }
+#d3h { display: inline-block; position: absolute; width: 50px; height: 100px; top: 140px; left: 105px; opacity: 1.0; padding: 0px; border: 0px solid yellow; }
+#d4h { display: inline-block; position: absolute; width: 50px; height: 100px; top: 140px; left: 225px; opacity: 1.0; padding: 0px; border: 0px solid yellow; }
+#d5h { display: inline-block; position: absolute; width: 50px; height: 100px; top: 140px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid yellow; }
+
+/*--- SUMMARY DICE ---*/
+#dealer_final { 
+	display: block; 
+	position: absolute; 
+	top: 60px; 
+	left: 45px; 
+	width: 300px; 
+	height: 100px; 
+	opacity: 1.0; 
+	padding: 10px; 
+	border: 0px solid pink; 
+	}
+#player_final { 
+	display: block; 
+	position: absolute; 
+	top: 100px; 
+	left: 45px; 
+	width: 300px; 
+	height: 100px; 
+	opacity: 1.0; 
+	padding: 10px; 
+	border: 0px solid pink; 
+	}
+
+
+#d1fd { display: block; position: absolute; width: 60px; height: 100px; top: 40px; left: 60px; opacity: 1.0; padding: 0px; border: 0px solid green; }
+#d2fd { display: block; position: absolute; width: 60px; height: 100px; top: 40px; left: 100px; opacity: 1.0; padding: 0px; border: 0px solid green; }
+#d3fd { display: block; position: absolute; width: 60px; height: 100px; top: 40px; left: 140px; opacity: 1.0; padding: 0x; border: 0px solid green; }
+#d4fd { display: block; position: absolute; width: 60px; height: 100px; top: 40px; left: 180px; opacity: 1.0; padding: 0px; border: 0px solid green; }
+#d5fd { display: block; position: absolute; width: 60px; height: 100px; top: 40px; left: 220px; opacity: 1.0; padding: 0px; border: 0px solid green; }
+
+#d1fp { display: block; position: absolute; width: 60px; height: 100px; top: 80px; left: 45px; opacity: 1.0; padding: 0px; border: 0px solid blue; }
+#d2fp { display: block; position: absolute; width: 60px; height: 100px; top: 80px; left: 285px; opacity: 1.0; padding: 0px; border: 0px solid blue; }
+#d3fp { display: block; position: absolute; width: 60px; height: 100px; top: 80px; left: 105px; opacity: 1.0; padding: 0px; border: 0px solid blue; }
+#d4fp { display: block; position: absolute; width: 60px; height: 100px; top: 80px; left: 225px; opacity: 1.0; padding: 0px; border: 0px solid blue; }
+#d5fp { display: block; position: absolute; width: 60px; height: 100px; top: 80px; left: 165px; opacity: 1.0; padding: 0px; border: 0px solid blue; }
+
+/*-- BG ANIMATION PANELS --*/
+#or1_0 { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 150px; border: 0px solid green; }
+#or2_0 { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 150px; border: 0px solid green; }
+#or3_0 { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 150px; border: 0px solid green; }
+#or4_0 { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 150px; border: 0px solid green; }
+#py1_0 { display: block; position: absolute; top: 350px; left: 0px; width: 100%; height: 120px; border: 0px solid green; }
+#py2_0 { display: block; position: absolute; top: 350px; left: 0px; width: 100%; height: 120px; border: 0px solid green; }
+
+/*---- INDEX CSS ----*/
+#i_or1_0 { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 150px; border: 0px solid green; }
+#i_or2_0 { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 150px; border: 0px solid green; }
+#i_or3_0 { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 150px; border: 0px solid green; }
+#i_or4_0 { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 150px; border: 0px solid green; }
+
+#i_sh1_0 { display: block; position: absolute; top: 150px; left: 0px; width: 100%; height: 100px; border: 0px solid green; }
+#i_sh2_0 { display: block; position: absolute; top: 150px; left: 0px; width: 100%; height: 100px; border: 0px solid green; }
+#i_sh3_0 { display: block; position: absolute; top: 150px; left: 0px; width: 100%; height: 100px; border: 0px solid green; }
+#i_sh4_0 { display: block; position: absolute; top: 150px; left: 0px; width: 100%; height: 100px; border: 0px solid green; }
+
+#i_ho1_0 { display: block; position: absolute; top: 250px; left: 0px; width: 100%; height: 100px; border: 0px solid green; }
+#i_ho2_0 { display: block; position: absolute; top: 250px; left: 0px; width: 100%; height: 100px; border: 0px solid green; }
+#i_ho3_0 { display: block; position: absolute; top: 250px; left: 0px; width: 100%; height: 100px; border: 0px solid green; }
+#i_ho4_0 { display: block; position: absolute; top: 250px; left: 0px; width: 100%; height: 100px; border: 0px solid green; }
+
+#i_py1_0 { display: block; position: absolute; top: 350px; left: 0px; width: 100%; height: 120px; border: 0px solid green; }
+#i_py2_0 { display: block; position: absolute; top: 350px; left: 0px; width: 100%; height: 120px; border: 0px solid green; }
+#i_py3_0 { display: block; position: absolute; top: 350px; left: 0px; width: 100%; height: 120px; border: 0px solid green; }
+#i_py4_0 { display: block; position: absolute; top: 350px; left: 0px; width: 100%; height: 120px; border: 0px solid green; }
+
+
+#i_d1 { display: inline-block; position: absolute; width: 60px; height: 100px; left: 4px; padding: 0px; }
+#i_d1end { display: inline-block; position: absolute;  width: 60px; height: 100px; left: 4px; padding: 0px; border: 0px solid yellow; }
+#i_d2 { display: inline-block; position: absolute; width: 60px; height: 100px; left: 64px; padding: 0px; border: 0px solid red; }
+#i_d2end { display: inline-block; position: absolute; width: 60px; height: 100px; left: 4px; padding: 0px; border: 1px solid yellow; }
+#i_d3 { display: inline-block; position: absolute; width: 60px; height: 100px; left: 125px; padding: 0px; border: 0px solid red; }
+#i_d3end { display: inline-block; position: absolute; width: 60px; height: 100px; left: 4px; padding: 0px; border: 1px solid yellow; }
+#i_d4 { display: inline-block; position: absolute; width: 60px; height: 100px; left: 185px; padding: 0px; border: 0px solid red; }
+#i_d4end { display: inline-block; position: absolute; width: 60px; height: 100px; left: 4px; padding: 0px; border: 1px solid yellow; }
+#i_d5 { display: inline-block; position: absolute; width: 60px; height: 100px; left: 245px; padding: 0px; border: 0px solid red; }
+#i_d5end { display: inline-block; position: absolute; width: 60px; height: 100px; left: 4px; padding: 0px; border: 1px solid yellow; }
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+#i_ani_stage { display: none; position: relative; top: 150px; left: 0px; width: 100%; height: 200px; padding: 0px; border: 0px solid #999; }
+#dice_stage { display: block; position: relative; top: 0px; left: 0px; width: 100%; height: 200px; padding: 0px; border: 0px solid yellow; }
+#dec_stage { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 100px; padding: 0px; border: 0px solid red; }
+#dec_stage2 { display: none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100px; padding: 0px; border: 1px solid blue; }
+#autohold_stage { display: block; position: relative; top: 0px; left: 0px; width: 100%; height: 100px; padding: 0px; border: 0px solid orange; }
+
+
+
+/* =============================================================================== */
+/* @@@ INFO-CONTAINER COLUMN 1.0: 'RD-CONTAINER' | COLUMN 2.0: 'VIB-CONTAINER' @@@ */
+/* =============================================================================== */
+.info-container{
+display: grid;
+justify-content: start;
+grid-template-columns: 60px 90px 100px auto;
+grid-template-rows: 32px;
+grid-rows-gap: 0px;
+grid-column-gap: 0px;
+padding: 8px;
+width: 360px;
+border: 4px outset #999;
+background-color: #000;
+}
+/* ======================================================== */
+/* @@@ 'RD-CONTAINER' @@@ */
+/* ======================================================== */  
+.rd-container{
+display: inline-grid;
+justify-content: start;
+grid-template-columns: auto 10px auto; 
+grid-column-gap: 0px;
+padding-top: 0px;
+padding-bottom: 0px;
+padding-left: 0px;
+padding-right: 0px;
+background-color: lightgreen;
+width: 298px;
+border: 0px dashed red;
+}
+#rdNotxt{
+display: inline;
+font-size: 12px;
+font-style: italic;
+padding: 2px;
+color: #fff;
+background-color: #000;
+border: 0px dashed red
+}
+#rdNo{
+display: inline;
+text-align: left;
+font-size: 12px;
+padding: 2px;
+color: #fff;
+background-color: darkblue;
+border: 1px solid #fff;
+}
+#drdcontainer {
+height: 15px;
+background-color: #000;
+position: relative;
+}
+#drdneedle {
+font-size: 10px;
+line-height: 12px;
+color: #fff;
+text-align: right;
+width: 10px;
+max-width: 88px;
+height: 12px;
+padding: 0px;
+position: absolute;
+background-color: red;
+border: 0px solid #fff;
+}
+#qrdcontainer {
+height: 15px;
+background-color: #000;
+border: 0px solid #000;
+position: relative;
+}
+#qrdneedle {
+font-size: 10px;
+line-height: 12px;
+color: #fff;
+text-align: right;
+width: 10px;
+max-width: 88px;
+height: 12px;
+padding: 0px;
+position: absolute;
+background-color: #3dc238;
+border: 0px solid #fff;
+}
+
+
+
+/* =============== */
+/* @@@ BUTTONS @@@ */
+/* =============== */
+.button-container{
+display: grid;
+justify-content: start;
+align-content: left;
+grid-template-columns: auto auto auto auto;
+grid-column-gap: 0px;
+grid-template-rows: 22px;
+grid-rows-gap: 0px;
+padding: 0px;
+top: 400px;
+left: 0px;
+width: 148px;
+color: #fff;
+background-color: #000;
+border-top: 4px solid #666;
+border-bottom: 4px solid #999;
+border-left: 4px solid #999;
+border-right: 0px solid #999;
+}
+.button {
+padding-top: 0px;
+padding-bottom: 2px;
+padding-left: 5px;
+padding-right: 5px;
+font-size: 8px;
+line-height: 10px;
+font-style: italic;
+text-align: right;
+cursor: pointer;
+color: #fff;
+width: 74px;
+background-color: black;
+border-right: 4px solid #666;
+border-top: 0px solid #000;
+border-left: 0px solid #000;
+box-shadow: 0 4px #999;
+zIndex: 99;
+}
+.button:hover {
+color: #fff;
+background-color: red;
+}
+.button:active {
+border-right: 2px solid #999;
+background-color: red;
+color: #fff;
+box-shadow: 0 4px #666;
+transform: translateY(2px);
+}
+.start-button {
+padding-top: 0px;
+padding-bottom: 2px;
+padding-left: 5px;
+padding-right: 5px;
+font-size: 8px;
+line-height: 10px;
+font-style: italic;
+text-align: right;
+cursor: pointer;
+color: #fff;
+width: 74px;
+background-color: #000;
+border-right: 4px solid #666;
+border-top: 0px solid #000;
+border-left: 0px solid #fe000;
+box-shadow: 0 4px #999;
+zIndex: 99;
+}
+.start-button:hover {
+color: #fff;
+background-color: red;
+}
+.start-button:active {
+border-right: 2px solid #999;
+background-color: red;
+color: #fff;
+box-shadow: 0 4px #666;
+transform: translateY(2px);
+}
+.end-button {
+padding-top: 0px;
+padding-bottom: 2px;
+padding-left: 5px;
+padding-right: 5px;
+font-size: 8px;
+line-height: 10px;
+font-style: italic;
+text-align: right;
+cursor: pointer;
+color: #fff;
+width: 72px;
+background-color: black;
+border-right: 4px solid #666;
+border-top: 0px solid #000;
+border-left: 0px solid #000;
+box-shadow: 0 4px #999;
+zIndex: 99;
+}
+.end-button:hover {
+color: #fff;
+background-color: red;
+}
+.end-button:active {
+border-right: 2px solid #999;
+background-color: red;
+color: #fff;
+box-shadow: 0 4px #666;
+transform: translateY(2px);
+}
+
+.game-button {
+margin-top: 8px;
+padding-bottom: 0px;
+padding-left: 5px;
+padding-right: 5px;
+font-size: 12px;
+font-style: italic;
+text-align: right;
+cursor: pointer;
+color: #fff;
+background-color: black;
+border-right: 4px solid #999;
+border-top: 0px solid #000;
+border-left: 0px solid #000;
+box-shadow: 0 4px #999;
+z-index: 99;
+}
+.game-button:hover {
+color: #fff;
+background-color: #3dc238;
+}
+.game-button:active {
+border-right: 2px solid #999;
+background-color: red;
+color: #fff;
+box-shadow: 0 4px #666;
+transform: translateY(2px);
+}
+/* @@@ END BUTTONS @@@*/
