@@ -1,10 +1,10 @@
-<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-<!--      ORION DICE DECIDE       -->
-<!-- www.jamespankhurst.co.uk/odd -->
-<!-- jamespankhurst180@gmail.com  -->
-<!-- github.com/jamespankhurst    -->
-<!-- gitlab.com/jamespankhurst180 -->
-<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!--          ORION DICE DECIDE               -->
+<!-- www.jamespankhurst.co.uk/odd1            -->
+<!-- jamespankhurst180@gmail.com              -->
+<!-- sample code: github.com/jamespankhurst   -->
+<!-- repository: gitlab.com/jamespankhurst180 -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -25,11 +25,7 @@
   </style>
  </head>
  <title>OrionDiceDecide</title>
-  <body>
-    <!-- onload='introAni("James")'  onload='i_pulse(12, 2200, 99)'-->
-  <!-- onload='startRoll()' -->
- <!-- onload='startGame("Player")'-->
- <!-- onload='setTimeout(function(){ startGame("Player"); }, 500)' -->
+ <body onload="runAni()">
   
  <div class="flex-container">
   
@@ -37,319 +33,283 @@
    
   <div id="arena-container" class="w3-container">
     
-    <div id="i_ani_stage" class="w3-container" style="background-image: url('assets/img/bgani/ani_stage_bg.png');">
-
-     
-      
-      <canvas id="i_d1d1" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-      <canvas id="i_d2d1" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-      <canvas id="i_d3d1" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-      <canvas id="i_d4d1" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-      <canvas id="i_d5d1" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-
-      <canvas id="i_d1d2" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-      <canvas id="i_d2d2" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-      <canvas id="i_d3d2" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-      <canvas id="i_d4d2" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-      <canvas id="i_d5d2" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-
-      <canvas id="i_d1f" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-      <canvas id="i_d2f" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-      <canvas id="i_d3f" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-      <canvas id="i_d4f" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-      <canvas id="i_d5f" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-
-      <canvas id="i_d1h" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-      <canvas id="i_d2h" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-      <canvas id="i_d3h" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-      <canvas id="i_d4h" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-      <canvas id="i_d5h" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
-
-      <canvas id="i_d1mh" width="60" height="100" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
-      <canvas id="i_d2mh" width="60" height="100" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
-      <canvas id="i_d3mh" width="60" height="100" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
-      <canvas id="i_d4mh" width="60" height="100" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
-      <canvas id="i_d5mh" width="60" height="100" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
-
-    </div>
-    <!-- end ani_stage -->
-
-    <div class='button-container'>
-      <button id="setUpGamebut" class='start-button' onclick="setUpGame('Anon')">START</button>
-      
-    </div>
-
+     <div id="i_eyehorus" class="w3-container"  style="background-image: url('assets/img/ey/eyehorus_0.png');">
+        <div id="loading_bar" class="w3-container w3-text-white">loading...</div>
+        <div id="i_ey1_1" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_2" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_3" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_4" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_5" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_6" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_7" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_8" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_9" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_10" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_11" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_12" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_13" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_14" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_15" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_16" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_17" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_18" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>
+        <div id="i_ey1_final" class="w3-container" style="background-image: url('assets/img/ey/eyehorus_0.png');"></div>  
+      </div>
+    
     <!-- i_or1 -->
-    <div id="i_or1_0" class="w3-container" style="background-image: url('assets/img/or/or_0.png');">
- 
-      <div id="i_or1_1" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or1_2" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or1_3" class="w3-container" style="background-image: url('assets/img/or/or_4.png');"></div>
-      <div id="i_or1_4" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or1_5" class="w3-container" style="background-image: url('assets/img/or/or_4.png');"></div>
-      <div id="i_or1_6" class="w3-container" style="background-image: url('assets/img/or/or_4.png');"></div>
+    <div id="i_or_ani_1" class="w3-container">
+      <div id="i_orionbelt" class="w3-container" style="background-image: url('assets/img/or/orion_pulse.png');">
+             
+        <div id="i_or1_1" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_8_1.png');"></div>
+        <div id="i_or1_2" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_8_1.png');"></div>
+        <div id="i_or1_3" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_8_1.png');"></div>
+        <div id="i_or1_4" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_8.png');"></div>
+        <div id="i_or1_5" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_7_1.png');"></div>
+        <div id="i_or1_6" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_7_1.png');"></div>
           
-      <div id="i_or1_7" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_8" class="w3-container" style="background-image: url('assets/img/or/or_4.png');"></div>
-      <div id="i_or1_9" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or1_10" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or1_11" class="w3-container" style="background-image: url('assets/img/or/or_4.png');"></div>
-      <div id="i_or1_12" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
+        <div id="i_or1_7" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_5.png');"></div>
+        <div id="i_or1_8" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_6.png');"></div>
+        <div id="i_or1_9" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_7_1.png');"></div>
+        <div id="i_or1_10" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_7_1.png');"></div>
+        <div id="i_or1_11" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_5.png');"></div>
+        <div id="i_or1_12" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_6.png');"></div>
           
-      <div id="i_or1_13" class="w3-container" style="background-image: url('assets/img/or/or_4.png');"></div>
-      <div id="i_or1_14" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_15" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or1_16" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or1_17" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_18" class="w3-container" style="background-image: url('assets/img/or/or_4.png');"></div>
-          
-      <div id="i_or1_19" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_20" class="w3-container" style="background-image: url('assets/img/or/or_4.png');"></div>
-      <div id="i_or1_21" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or1_22" class="w3-container" style="background-image: url('assets/img/or/or_4.png');"></div>
-      <div id="i_or1_23" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_24" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-          
-      <div id="i_or1_25" class="w3-container" style="background-image: url('assets/img/or/or_7.png');"></div>
-      <div id="i_or1_26" class="w3-container" style="background-image: url('assets/img/or/or_8.png');"></div>
-      <div id="i_or1_27" class="w3-container" style="background-image: url('assets/img/or/or_7.png');"></div>
-      <div id="i_or1_28" class="w3-container" style="background-image: url('assets/img/or/or_8.png');"></div>
-      <div id="i_or1_29" class="w3-container" style="background-image: url('assets/img/or/or_7.png');"></div>
-      <div id="i_or1_30" class="w3-container" style="background-image: url('assets/img/or/or_8.png');"></div>
-          
-      <div id="i_or1_31" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_32" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_33" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_34" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_35" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_36" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-          
-      <div id="i_or1_37" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_38" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_39" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_40" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_41" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_42" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-          
-      <div id="i_or1_43" class="w3-container" style="background-image: url('assets/img/or/or_4.png');"></div>
-      <div id="i_or1_44" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_45" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_46" class="w3-container" style="background-image: url('assets/img/or/or_4.png');"></div>
-      <div id="i_or1_47" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_48" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-          
-      <div id="i_or1_49" class="w3-container" style="background-image: url('assets/img/or/or_4.png');"></div>
-      <div id="i_or1_50" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_51" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_52" class="w3-container" style="background-image: url('assets/img/or/or_4.png');"></div>
-      <div id="i_or1_53" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_54" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-          
-      <div id="i_or1_55" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_56" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_57" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_58" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_59" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or1_60" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
+        <div id="i_or1_13" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_8.png');"></div>
+        <div id="i_or1_14" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_6.png');"></div>
+        <div id="i_or1_15" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_5.png');"></div>
+        <div id="i_or1_16" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_7_1.png');"></div>
+        <div id="i_or1_17" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_8.png');"></div>
+        <div id="i_or1_18" class="w3-container" style="background-image: url('assets/img/or/orion_pulse_8.png');"></div>
         
-      <div id="i_or1_final" class="w3-container" style="background-image: url('assets/img/or/or_0.png');"></div>
+        <div id="i_or1_final" class="w3-container" style="background-image: url('assets/img/or/orion_pulse.png');"></div>
+      </div>
     </div>
     <!-- end i_or1 -->
-
-    <!-- i_or2 -->
-    <div id="i_or2_0" class="w3-container" style="background-image: url('assets/img/or/or_0.png');">
-      <div id="i_or2_1" class="w3-container" style="background-image: url('assets/img/or/or_0.png');"></div>
-      <div id="i_or2_2" class="w3-container" style="background-image: url('assets/img/or/or_1.png');"></div>
-      <div id="i_or2_3" class="w3-container" style="background-image: url('assets/img/or/or_0.png');"></div>
-      <div id="i_or2_4" class="w3-container" style="background-image: url('assets/img/or/or_1.png');"></div>
-      <div id="i_or2_5" class="w3-container" style="background-image: url('assets/img/or/or_0.png');"></div>
-      <div id="i_or2_6" class="w3-container" style="background-image: url('assets/img/or/or_1.png');"></div>
-      <div id="i_or2_7" class="w3-container" style="background-image: url('assets/img/or/or_0.png');"></div>
-      <div id="i_or2_8" class="w3-container" style="background-image: url('assets/img/or/or_1.png');"></div>
-      <div id="i_or2_9" class="w3-container" style="background-image: url('assets/img/or/or_1.png');"></div>
-      <div id="i_or2_10" class="w3-container" style="background-image: url('assets/img/or/or_0.png');"></div>
-      <div id="i_or2_11" class="w3-container" style="background-image: url('assets/img/or/or_0.png');"></div>
-      <div id="i_or2_12" class="w3-container" style="background-image: url('assets/img/or/or_1.png');"></div>
-      <div id="i_or2_13" class="w3-container" style="background-image: url('assets/img/or/or_1.png');"></div>
-      <div id="i_or2_14" class="w3-container" style="background-image: url('assets/img/or/or_0.png');"></div>
-      <div id="i_or2_15" class="w3-container" style="background-image: url('assets/img/or/or_1.png');"></div>
-      <div id="i_or2_16" class="w3-container" style="background-image: url('assets/img/or/or_1.png');"></div>
-      <div id="i_or2_17" class="w3-container" style="background-image: url('assets/img/or/or_0.png');"></div>
-      <div id="i_or2_18" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or2_19" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or2_20" class="w3-container" style="background-image: url('assets/img/or/or_1.png');"></div>
-      <div id="i_or2_21" class="w3-container" style="background-image: url('assets/img/or/or_1.png');"></div>
-      <div id="i_or2_22" class="w3-container" style="background-image: url('assets/img/or/or_0.png');"></div>
-      <div id="i_or2_23" class="w3-container" style="background-image: url('assets/img/or/or_1.png');"></div>
-      <div id="i_or2_24" class="w3-container" style="background-image: url('assets/img/or/or_0.png');"></div>
-      <div id="i_or2_final" class="w3-container" style="background-image: url('assets/img/or/or_0.png');"></div>
-    </div>
-    <!-- end i_or2 -->
-
-    <!-- i_or3 -->
-    <div id="i_or3_0" class="w3-container" style="background-image: url('assets/img/or/or_0.png');">
-      <div id="i_or3_1" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or3_2" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or3_3" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or3_4" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or3_5" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or3_6" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or3_7" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or3_8" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or3_9" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or3_10" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or3_11" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or3_12" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or3_13" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or3_14" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or3_15" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or3_16" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or3_17" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or3_18" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or3_19" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or3_20" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or3_21" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or3_22" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or3_23" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or3_24" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or3_final" class="w3-container" style="background-image: url('assets/img/or/or_0.png');"></div>
-    </div>
-    <!-- end i_or3 -->
     
-    <!-- i_or4 -->
-    <div id="i_or4_0" class="w3-container" style="background-image: url('assets/img/or/or_0.png');">
-      <div id="i_or4_1" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or4_2" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or4_3" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or4_4" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or4_5" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or4_6" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or4_7" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or4_8" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or4_9" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or4_10" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or4_11" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or4_12" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or4_13" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or4_14" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or4_15" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or4_16" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or4_17" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or4_18" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or4_19" class="w3-container" style="background-image: url('assets/img/or/or_10.png');"></div>
-      <div id="i_or4_20" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or4_21" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or4_22" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or4_23" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
-      <div id="i_or4_24" class="w3-container" style="background-image: url('assets/img/or/or_8_1.png');"></div>
-      <div id="i_or4_final" class="w3-container" style="background-image: url('assets/img/or/or_0.png');"></div>
+    <div id="i_sh_ani_1" class="w3-container">
+        <div id="i_dice-shaker" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse.png');">
+          <div id="i_sh1_1" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_0_1.png');"></div>
+          <div id="i_sh1_2" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_0_1.png');"></div>
+          <div id="i_sh1_3" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_0_1.png');"></div>
+          <div id="i_sh1_4" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_7.png');"></div>
+          <div id="i_sh1_5" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_7.png');"></div>
+          <div id="i_sh1_6" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_1_4.png');"></div>
+          <div id="i_sh1_7" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_1_4.png');"></div>
+          <div id="i_sh1_8" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_7.png');"></div>
+          <div id="i_sh1_9" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_7.png');"></div>
+          <div id="i_sh1_10" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_1_4.png');"></div>
+          <div id="i_sh1_11" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_1_4.png');"></div>
+          <div id="i_sh1_12" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_7.png');"></div>  
+          <div id="i_sh1_13" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_7.png');"></div>
+          <div id="i_sh1_14" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_7.png');"></div>
+          <div id="i_sh1_15" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_7.png');"></div>
+          <div id="i_sh1_16" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_7.png');"></div>
+          <div id="i_sh1_17" class="w3-container" style="background-image: url('assets/img/sh//shaker_pulse_0_1.png');"></div>
+          <div id="i_sh1_18" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse_0_1.png');"></div>
+          <div id="i_sh1_final" class="w3-container" style="background-image: url('assets/img/sh/shaker_pulse.png');"></div>
+      </div>
     </div>
-    <!-- end i_or4 -->
+    <div id="i_ho_ani_1" class="w3-container">
+      <div id="i_dice-holder" class="w3-container"  style="background-image: url('assets/img/ho/holder_pulse.png');">
+        <div id="i_ho1_1" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_2" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_3" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_4" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_5" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_6" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_7" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_8" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_9" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_10" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_11" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_12" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_13" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_14" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_15" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_16" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_17" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_18" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse_0.png');"></div>
+        <div id="i_ho1_final" class="w3-container" style="background-image: url('assets/img/ho/holder_pulse.png');"></div>  
+      </div>
+    </div>
     
-    
-    <!-- i_py1 -->
-    <div id="i_py1_0" class="w3-container" style="background-image: url('assets/img/py/py_0.png');">
-
+    <div id="i_ey_ani_1" class="w3-container">
       
-      
-      <div id="i_py1_1" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_2" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_3" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_4" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_5" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_6" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>    
-      <div id="i_py1_7" class="w3-container" style="background-image: url('assets/img/py/py_3.png');"></div>
-      <div id="i_py1_8" class="w3-container" style="background-image: url('assets/img/py/py_3.png');"></div>
-      <div id="i_py1_9" class="w3-container" style="background-image: url('assets/img/py/py_3.png');"></div>
-      <div id="i_py1_10" class="w3-container" style="background-image: url('assets/img/py/py_3.png');"></div>
-      <div id="i_py1_11" class="w3-container" style="background-image: url('assets/img/py/py_3.png');"></div>
-      <div id="i_py1_12" class="w3-container" style="background-image: url('assets/img/py/py_3.png');"></div>    
-      <div id="i_py1_13" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>
-      <div id="i_py1_14" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>
-      <div id="i_py1_15" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>
-      <div id="i_py1_16" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>
-      <div id="i_py1_17" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>
-      <div id="i_py1_18" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>    
-      <div id="i_py1_19" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>
-      <div id="i_py1_20" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>
-      <div id="i_py1_21" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>
-      <div id="i_py1_22" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>
-      <div id="i_py1_23" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>
-      <div id="i_py1_24" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>    
-      <div id="i_py1_25" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>
-      <div id="i_py1_26" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>
-      <div id="i_py1_27" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>
-      <div id="i_py1_28" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>
-      <div id="i_py1_29" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>
-      <div id="i_py1_30" class="w3-container" style="background-image: url('assets/img/py/py_4.png');"></div>
-      <div id="i_py1_31" class="w3-container" style="background-image: url('assets/img/py/py_0.png');"></div>
-      <div id="i_py1_32" class="w3-container" style="background-image: url('assets/img/py/py_0.png');"></div>
-      <div id="i_py1_33" class="w3-container" style="background-image: url('assets/img/py/py_0.png');"></div>
-      <div id="i_py1_34" class="w3-container" style="background-image: url('assets/img/py/py_0.png');"></div>
-      <div id="i_py1_35" class="w3-container" style="background-image: url('assets/img/py/py_0.png');"></div>
-      <div id="i_py1_36" class="w3-container" style="background-image: url('assets/img/py/py_0.png');"></div>    
-      <div id="i_py1_37" class="w3-container" style="background-image: url('assets/img/py/py_0.png');"></div>
-      <div id="i_py1_38" class="w3-container" style="background-image: url('assets/img/py/py_0.png');"></div>
-      <div id="i_py1_39" class="w3-container" style="background-image: url('assets/img/py/py_0.png');"></div>
-      <div id="i_py1_40" class="w3-container" style="background-image: url('assets/img/py/py_0.png');"></div>
-      <div id="i_py1_41" class="w3-container" style="background-image: url('assets/img/py/py_0.png');"></div>
-      <div id="i_py1_42" class="w3-container" style="background-image: url('assets/img/py/py_0.png');"></div>    
-      <div id="i_py1_43" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_44" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_45" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_46" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_47" class="w3-container" style="background-image: url('assets/img/py/py_3.png');"></div>
-      <div id="i_py1_48" class="w3-container" style="background-image: url('assets/img/py/py_3.png');"></div>    
-      <div id="i_py1_49" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_50" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_51" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_52" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_53" class="w3-container" style="background-image: url('assets/img/py/py_3.png');"></div>
-      <div id="i_py1_54" class="w3-container" style="background-image: url('assets/img/py/py_3.png');"></div>    
-      <div id="i_py1_55" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_56" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_57" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_58" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_59" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
-      <div id="i_py1_60" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>  
-      <div id="i_py1_final" class="w3-container" style="background-image: url('assets/img/py/py_0.png');"></div>
-    </div>
-    <!-- end i_py1 -->
+      <div id="dice_roll">
+        <div id="f_1"><img src="assets/img/qm/xex/1.png" alt="f1" /></div>
+        <div id="f_2"><img src="assets/img/qm/xex/2.png" alt="f2" /></div>
+        <div id="f_3"><img src="assets/img/qm/xex/3.png" alt="f3" /></div>
+        <div id="f_4"><img src="assets/img/qm/xex/4.png" alt="f4" /></div>
+        <div id="f_5"><img src="assets/img/qm/xex/5.png" alt="f5" /></div>
+        <div id="f_6"><img src="assets/img/qm/xex/6.png" alt="f6" /></div>
+        <div id="f_7"><img src="assets/img/qm/xex/7.png" alt="f7" /></div>
+        <div id="f_8"><img src="assets/img/qm/xex/8.png" alt="f8" /></div>
+        <div id="f_9"><img src="assets/img/qm/xex/9.png" alt="f9" /></div>
+        <div id="f_10"><img src="assets/img/qm/xex/10.png" alt="f10" /></div>
+        <div id="f_11"><img src="assets/img/qm/xex/11.png" alt="f11" /></div>
+        <div id="f_12"><img src="assets/img/qm/xex/12.png" alt="f12" /></div>
+        <div id="f_13"><img src="assets/img/qm/xex/13.png" alt="f13" /></div>
+        <div id="f_14"><img src="assets/img/qm/xex/14.png" alt="f14" /></div>
+        <div id="f_15"><img src="assets/img/qm/xex/15.png" alt="f15" /></div>
+        <div id="f_16"><img src="assets/img/qm/xex/16.png" alt="f16" /></div>
+        <div id="f_17"><img src="assets/img/qm/xex/17.png" alt="f17" /></div>
+        <div id="f_18"><img src="assets/img/qm/xex/18.png" alt="f18" /></div>
+        <div id="f_19"><img src="assets/img/qm/xex/19.png" alt="f19" /></div>
+        <div id="f_20"><img src="assets/img/qm/xex/20.png" alt="f20" /></div>
+        <div id="f_21"><img src="assets/img/qm/xex/21.png" alt="f21" /></div>
+        <div id="f_22"><img src="assets/img/qm/xex/22.png" alt="f22" /></div>
+        <div id="f_23"><img src="assets/img/qm/xex/23.png" alt="f23" /></div>
+        <div id="f_24"><img src="assets/img/qm/xex/24.png" alt="f24" /></div>
+        <div id="f_25"><img src="assets/img/qm/xex/25.png" alt="f25" /></div>
+        <div id="f_26"><img src="assets/img/qm/xex/26.png" alt="f26" /></div>
+        <div id="f_27"><img src="assets/img/qm/xex/27.png" alt="f27" /></div>
+        <div id="f_28"><img src="assets/img/qm/xex/28.png" alt="f28" /></div>
+        <div id="f_29"><img src="assets/img/qm/xex/29.png" alt="f29" /></div>
+        <div id="f_30"><img src="assets/img/qm/xex/30.png" alt="f30" /></div>
+        <div id="f_31"><img src="assets/img/qm/xex/31.png" alt="f31" /></div>
+        <div id="f_32"><img src="assets/img/qm/xex/32.png" alt="f32" /></div>
+        <div id="f_33"><img src="assets/img/qm/xex/33.png" alt="f33" /></div>
+        <div id="f_34"><img src="assets/img/qm/xex/34.png" alt="f34" /></div>
+        <div id="f_35"><img src="assets/img/qm/xex/35.png" alt="f35" /></div>
+        <div id="f_36"><img src="assets/img/qm/xex/36.png" alt="f36" /></div>
+        <div id="f_37"><img src="assets/img/qm/xex/37.png" alt="f37" /></div>
+        <div id="f_38"><img src="assets/img/qm/xex/38.png" alt="f38" /></div>
+        <div id="f_39"><img src="assets/img/qm/xex/39.png" alt="f39" /></div>
+        <div id="f_40"><img src="assets/img/qm/xex/40.png" alt="f40" /></div>
+        <div id="f_41"><img src="assets/img/qm/xex/41.png" alt="f41" /></div>
+        <div id="f_42"><img src="assets/img/qm/xex/42.png" alt="f42" /></div>
+        <div id="f_43"><img src="assets/img/qm/xex/43.png" alt="f43" /></div>
+        <div id="f_44"><img src="assets/img/qm/xex/44.png" alt="f44" /></div>
+        <div id="f_45"><img src="assets/img/qm/xex/45.png" alt="f45" /></div>
+        <div id="f_46"><img src="assets/img/qm/xex/46.png" alt="f46" /></div>
+        <div id="f_47"><img src="assets/img/qm/xex/47.png" alt="f47" /></div>
+        <div id="f_48"><img src="assets/img/qm/xex/48.png" alt="f48" /></div>
+        <div id="f_49"><img src="assets/img/qm/xex/49.png" alt="f49" /></div>
+        <div id="f_50"><img src="assets/img/qm/xex/50.png" alt="f50" /></div>
+        <div id="f_51"><img src="assets/img/qm/xex/51.png" alt="f51" /></div>
+        <div id="f_52"><img src="assets/img/qm/xex/52.png" alt="f52" /></div>
+        <div id="f_53"><img src="assets/img/qm/xex/53.png" alt="f53" /></div>
+        <div id="f_54"><img src="assets/img/qm/xex/54.png" alt="f54" /></div>
+        <div id="f_55"><img src="assets/img/qm/xex/55.png" alt="f55" /></div>
+        <div id="f_56"><img src="assets/img/qm/xex/56.png" alt="f56" /></div>
+        <div id="f_57"><img src="assets/img/qm/xex/57.png" alt="f57" /></div>
+        <div id="f_58"><img src="assets/img/qm/xex/58.png" alt="f58" /></div>
+        <div id="f_59"><img src="assets/img/qm/xex/59.png" alt="f59" /></div>
+        <div id="f_60"><img src="assets/img/qm/xex/60.png" alt="f60" /></div> 
+        <div id="f_61"><img src="assets/img/qm/x0/1.png" alt="f1" /></div>
+        <div id="f_62"><img src="assets/img/qm/x0/2.png" alt="f2" /></div>
+        <div id="f_63"><img src="assets/img/qm/x0/3.png" alt="f3" /></div>
+        <div id="f_64"><img src="assets/img/qm/x0/4.png" alt="f4" /></div>
+        <div id="f_65"><img src="assets/img/qm/x0/5.png" alt="f5" /></div>
+        <div id="f_66"><img src="assets/img/qm/x0/6.png" alt="f6" /></div>
+        <div id="f_67"><img src="assets/img/qm/x0/7.png" alt="f7" /></div>
+        <div id="f_68"><img src="assets/img/qm/x0/8.png" alt="f8" /></div>
+        <div id="f_69"><img src="assets/img/qm/x0/9.png" alt="f9" /></div>
+        <div id="f_70"><img src="assets/img/qm/x0/10.png" alt="f10" /></div>
+        <div id="f_71"><img src="assets/img/qm/x0/11.png" alt="f11" /></div>
+        <div id="f_72"><img src="assets/img/qm/x0/12.png" alt="f12" /></div>
+        <div id="f_73"><img src="assets/img/qm/x0/13.png" alt="f13" /></div>
+        <div id="f_74"><img src="assets/img/qm/x0/14.png" alt="f14" /></div>
+        <div id="f_75"><img src="assets/img/qm/x0/15.png" alt="f15" /></div>
+        <div id="f_76"><img src="assets/img/qm/x0/16.png" alt="f16" /></div>
+        <div id="f_77"><img src="assets/img/qm/x0/17.png" alt="f17" /></div>
+        <div id="f_78"><img src="assets/img/qm/x0/18.png" alt="f18" /></div>
+        <div id="f_79"><img src="assets/img/qm/x0/19.png" alt="f19" /></div>
+        <div id="f_80"><img src="assets/img/qm/x0/20.png" alt="f20" /></div>
+        <div id="f_81"><img src="assets/img/qm/x0/21.png" alt="f21" /></div>
+        <div id="f_82"><img src="assets/img/qm/x0/22.png" alt="f22" /></div>
+        <div id="f_83"><img src="assets/img/qm/x0/23.png" alt="f23" /></div>
+        <div id="f_84"><img src="assets/img/qm/x0/24.png" alt="f24" /></div>
+        <div id="f_85"><img src="assets/img/qm/x0/25.png" alt="f25" /></div>
+        <div id="f_86"><img src="assets/img/qm/x0/26.png" alt="f26" /></div>
+        <div id="f_87"><img src="assets/img/qm/x0/27.png" alt="f27" /></div>
+        <div id="f_88"><img src="assets/img/qm/x0/28.png" alt="f28" /></div>
+        <div id="f_89"><img src="assets/img/qm/x0/29.png" alt="f29" /></div>
+        <div id="f_90"><img src="assets/img/qm/x0/30.png" alt="f30" /></div>
+        <div id="f_91"><img src="assets/img/qm/x0/31.png" alt="f31" /></div>
+        <div id="f_92"><img src="assets/img/qm/x0/32.png" alt="f32" /></div>
+        <div id="f_93"><img src="assets/img/qm/x0/33.png" alt="f33" /></div>
+        <div id="f_94"><img src="assets/img/qm/x0/34.png" alt="f34" /></div>
+        <div id="f_95"><img src="assets/img/qm/x0/35.png" alt="f35" /></div>
+        <div id="f_96"><img src="assets/img/qm/x0/36.png" alt="f36" /></div>
+        <div id="f_97"><img src="assets/img/qm/x0/37.png" alt="f37" /></div>
+        <div id="f_98"><img src="assets/img/qm/x0/38.png" alt="f38" /></div>
+        <div id="f_99"><img src="assets/img/qm/x0/39.png" alt="f39" /></div>
+        <div id="f_100"><img src="assets/img/qm/x0/40.png" alt="f40" /></div>
+        <div id="f_101"><img src="assets/img/qm/x0/41.png" alt="f41" /></div>
+        <div id="f_102"><img src="assets/img/qm/x0/42.png" alt="f42" /></div>
+        <div id="f_103"><img src="assets/img/qm/x0/43.png" alt="f43" /></div>
+        <div id="f_104"><img src="assets/img/qm/x0/44.png" alt="f44" /></div>
+        <div id="f_105"><img src="assets/img/qm/x0/45.png" alt="f45" /></div>
+        <div id="f_106"><img src="assets/img/qm/x0/46.png" alt="f46" /></div>
+        <div id="f_107"><img src="assets/img/qm/x0/47.png" alt="f47" /></div>
+        <div id="f_108"><img src="assets/img/qm/x0/48.png" alt="f48" /></div>
+        <div id="f_109"><img src="assets/img/qm/x0/49.png" alt="f49" /></div>
+        <div id="f_110"><img src="assets/img/qm/x0/50.png" alt="f50" /></div>
+        <div id="f_111"><img src="assets/img/qm/x0/51.png" alt="f51" /></div>
+        <div id="f_112"><img src="assets/img/qm/x0/52.png" alt="f52" /></div>
+        <div id="f_113"><img src="assets/img/qm/x0/53.png" alt="f53" /></div>
+        <div id="f_114"><img src="assets/img/qm/x0/54.png" alt="f54" /></div>
+        <div id="f_115"><img src="assets/img/qm/x0/55.png" alt="f55" /></div>
+        <div id="f_116"><img src="assets/img/qm/x0/56.png" alt="f56" /></div>
+        <div id="f_117"><img src="assets/img/qm/x0/57.png" alt="f57" /></div>
+        <div id="f_118"><img src="assets/img/qm/x0/58.png" alt="f58" /></div>
+        <div id="f_119"><img src="assets/img/qm/x0/59.png" alt="f59" /></div>
+        <div id="f_120"><img src="assets/img/qm/x0/60.png" alt="f60" /></div> 
+        <div id="f_end"><img src="assets/img/qm/x0/60.png" alt="f60" /></div> 
+      </div>
 
-    <!-- i_py2 -->
-    <div id="i_py2_0" class="w3-container" style="background-image: url('assets/img/py/py_0.png');">
-      <div id="i_py2_1" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_2" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_3" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_4" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_5" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_6" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_7" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_8" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_9" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_10" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_11" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_12" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_13" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_14" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_15" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_16" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_17" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_18" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_19" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_20" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_21" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_22" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_23" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_24" class="w3-container" style="background-image: url('assets/img/py/py_1.png');"></div>
-      <div id="i_py2_final" class="w3-container" style="background-image: url('assets/img/py/py_0.png');"></div>
-    </div>
-    <!-- end i_py2 -->
+     
+    </div>     
+    <!-- end i_ey1 -->
     
-  </div>
-  <!-- end arena-container -->
+     <div id="i_py_ani_1" class="w3-container">
+        <div id="i_pyramidbelt" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse.png');"> 
+          <div id="i_py1_1" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>
+          <div id="i_py1_2" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>
+          <div id="i_py1_3" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>
+          <div id="i_py1_4" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>
+          <div id="i_py1_5" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>
+          <div id="i_py1_6" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>    
+          <div id="i_py1_7" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>
+          <div id="i_py1_8" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>
+          <div id="i_py1_9" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>
+          <div id="i_py1_10" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>
+          <div id="i_py1_11" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>
+          <div id="i_py1_12" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>    
+          <div id="i_py1_13" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>
+          <div id="i_py1_14" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>
+          <div id="i_py1_15" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>
+          <div id="i_py1_16" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>
+          <div id="i_py1_17" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>
+          <div id="i_py1_18" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse_0.png');"></div>  
+          <div id="i_py1_final" class="w3-container" style="background-image: url('assets/img/py/pyramid_pulse.png');"></div>
+        </div>
+      </div>
+    
+      <div id='i_button_panel'>
+        
+        <button id="startbutton" class='start-button' onclick="setUpGame('Anon', 0)">Can't decide?<br />Toss a coin..<br />or play a game of poker dice.. <br />click  to begin</button>
+      </div>
+    
+ </div>
+ <!-- end arena-container -->
+
+   <div id="scoreboard_panel">
+     <div class="scoreboard_container">
+       <div id="K5"></div>
+       <div id="K4"></div>
+       <div id="FH"></div>
+       <div id="K3"></div>
+       <div id="P2"></div>
+       <div id="P1"></div>
+       <div id="HC"></div>
+     </div>
+   </div>
+
 
    <div id="ctrl-panel">
+     
      
      <div class='info-container'>
        <span id='round-number'>
@@ -375,7 +335,7 @@
          <div id='vib-txt'>Vibeometer</div>
        </span>
 
-       <button id="secondrollbutton" class='end-button' onclick="diceRoll(2, 2)">ROLL</button>
+      
 
      </div>
    <!-- end info-container-->      
@@ -390,143 +350,6 @@
  </div>
  <!-- end flex-container -->
 
-
-    
- 
-    <script>
-      
-    
-      
-      
-      function i_orAni_1(fNo, spd) { secBgAnimate("i_or1_", 1, fNo, spd); };
-      function i_orAni_2(fNo, spd) { secBgAnimate("i_or2_", 1, fNo, spd); };
-      function i_orAni_3(fNo, spd) { secBgAnimate("i_or3_", 1, fNo, spd); };
-      function i_orAni_4(fNo, spd) { secBgAnimate("i_or4_", 1, fNo, spd); };
-      
-      function i_shAni_1(fNo, spd) { secBgAnimate("i_sh1_", 1, fNo, spd); };
-      function i_shAni_2(fNo, spd) { secBgAnimate("i_sh2_", 1, fNo, spd); };
-      
-      function i_hoAni_1(fNo, spd) { secBgAnimate("i_ho1_", 1, fNo, spd); };
-      function i_hoAni_2(fNo, spd) { secBgAnimate("i_ho2_", 1, fNo, spd); };
-      
-      function i_pyAni_1(fNo, spd) { secBgAnimate("i_py1_", 1, fNo, spd); };
-      function i_pyAni_2(fNo, spd) { secBgAnimate("i_py2_", 1, fNo, spd); };
-    </script>
-    
-    <script>
-      function i_SecAni_1() {
-      secBgAnimate("i_py1_", 1, 35, 50);
-      secBgAnimate("i_ho1_", 10, 25, 25);
-      secBgAnimate("i_sh1_", 10, 25, 25);
-      secBgAnimate("i_or1_", 1, 60, 50);
-      };
-    </script>
-    
-     <script>
-      function SecAni_1() {
-      secBgAnimate("py1_", 1, 35, 50);
-      secBgAnimate("ho1_", 10, 25, 25);
-      secBgAnimate("sh1_", 10, 25, 25);
-      secBgAnimate("or1_", 1, 60, 50);
-      };
-    </script>
-
-    <script>
-      function i_SecAni_1() {
-      secBgAnimate("i_py1_", 1, 35, 50);
-      secBgAnimate("i_ho1_", 10, 25, 25);
-      secBgAnimate("i_sh1_", 10, 25, 25);
-      secBgAnimate("i_or1_", 1, 60, 50);
-      };
-    </script>
-
-    <script>
-      function runSecAni() {
-      secBgAnimate("py1_", 1, 35, 50);
-      secBgAnimate("ho1_", 10, 25, 25);
-      secBgAnimate("sh1_", 10, 25, 25);
-      secBgAnimate("or1_", 1, 60, 50);
-      };
-    </script>
-    
-    
-
-    <script>
-      function runAni(){
-
-      //setTimeout(function(){ i_stageFront(); }, 2400);
-
-
-
-      i_stageFront();
-
-      i_aniFrmSect('i_f_', 1, 60, 60, 2200, 40);
-
-      //2200 - 40 - 220
-      //2200 - 60 - 220
-
-      //setTimeout(function(){ i_aniFrmSect('i_f_', 1, 60, 60, 2800, 40); }, 2600);
-      //setTimeout(function(){ i_stageRear(); }, 6800);
-      //setTimeout(function(){ restart(); }, 4800);
-      }
-    </script>
-
-    <script>
-      function i_aniFrmSect(prx, frst, fred, frs, dur, spd) {
-      console.log('i_FRST:' + frst + ' i_FRED:' + fred);
-
-      for( var j = frst; j <= fred; j++ ) {
-        var idNo = j;
-        var anispd = j * spd;
-        var lastframe = dur + (dur / 10);
-        bgAniDice(prx, idNo, anispd);
-        }
-        setTimeout(function(){ bgLastFrame(prx); }, lastframe);
-        //setTimeout(function(){ i_stageRear(); }, 6800);
-        };
-      </script>
-
-    <script>
-      function bgLastFrame(prx) {
-      var strlastFrame = prx + "end";
-      var elem = document.getElementById(strlastFrame);
-      elem.style.display = "block";
-      elem.style.zIndex = "1";
-      };
-    </script>
-
-    <script>
-      function i_stageFront() {
-      console.log('i_stageFront');
-      var elem = document.getElementById('i_sh1_0');
-      elem.style.display = "none";
-      elem.style.zIndex = "-1";
-      var elem1 = document.getElementById('i_ho1_0');
-      elem1.style.display = "none";
-      elem1.style.zIndex = "-1";
-      var elem2 = document.getElementById('i_ani_stage');
-      elem2.style.display = "block";
-      elem2.style.zIndex = "1";
-      };
-    </script>
-
-    <script>
-      function i_stageRear() {
-      console.log('i_stageRear');
-      var elem = document.getElementById('i_ani_stage');
-      elem.style.display = "none";
-      elem.style.zIndex = "-1";
-      var elem1 = document.getElementById('i_sh1_0');
-      elem1.style.display = "block";
-      elem1.style.zIndex = "1";
-      var elem2 = document.getElementById('i_ho1_0');
-      elem2.style.display = "block";
-      elem2.style.zIndex = "1";
-      };
-
-    </script>
-
-   
 
   </body>
 </html>
