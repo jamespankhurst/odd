@@ -1,10 +1,11 @@
-/*==============================*/
-/*===== ORION DICE DECIDE ======*/
-/* www.jamespankhurst.co.uk/odd */
-/* jamespankhurst180@gmail.com  */
-/* github.com/jamespankhurst    */
-/* gitlab.com/jamespankhurst180 */
-/*==============================*/
+/*==========================================*/
+/*========== ORION DICE DECIDE =============*/
+/* www.jamespankhurst.co.uk/odd1            */
+/* jamespankhurst180@gmail.com              */
+/* sample code: github.com/jamespankhurst   */
+/* repository: gitlab.com/jamespankhurst180 */
+/*==========================================*/
+
 /*-------------*/
 /*--- UTILS ---*/
 /*-------------*/
@@ -13,51 +14,6 @@ function getRndInteger(min, max) { return Math.floor(Math.random() * (max - min 
 function pad(num, size) { var s = num+""; while (s.length < size) s = "0" + s;  return s; }; //add 0 to numbers below 10
 function restart(){ window.location.replace("index.html"); };
 function unHoldDice() { _d1.dh = 0;	_d2.dh = 0;	_d3.dh = 0;	_d4.dh = 0;	_d5.dh = 0; };
-
-/*--------------------*/
-/*--- GAME OBJECTS ---*/
-/*--------------------*/
-const _playerObj_1 = { 
-						pid: 1, 
-						name: 'Dealer'
-					};
-const _playerObj_2 = { 
-						pid: 2, 
-						name: 'Player'
-					};
-const _playerObj_3 = { 
-						pid: 3, 
-						name: 'third player - JIC'
-					};
-
-const _commsObj = {
-				roll1txt: 'First roll',
-				roll2txt: 'Second roll',
-				rolltobeat: 'Roll to beat: '
-				};
-
-const _gameObj = {
-					gid: 1,
-					rdNo: 1,	
-					dealername: _playerObj_1.name,
-					dealerwins: 0,
-					dealerpoints: 0,
-					playername: _playerObj_2.name,
-					playerwins: 0,
-					playerpoints: 0,
-					bgani: 0,
-					ctrlpanel: 0
-				};
-
-const _holdObj = {
-					nines: 0,
-					tens: 0,
-					jacks: 0,
-					queens: 0,
-					kings: 0,
-					aces: 0,
-					autoheld: 0
-				};
 
 /*--------------------*/
 /*--- FACE OBJECTS ---*/
@@ -266,15 +222,59 @@ const _d5 = {	d_Obj: '_d5',
 			};
 
 /*--------------------*/
-/*--- HAND OBJECTS ---*/
+/*--- GAME OBJECTS ---*/
 /*--------------------*/
+let _playerObj_1 = { pid: 1, name: 'Dealer', wins: 0, points: 0	};
+let _playerObj_2 = { pid: 2, name: 'Player', wins: 0, points: 0	};
+
+const _gameObj = {
+					gid: 1,	
+					dealername: _playerObj_1.name,
+					dealerwins: 0,
+					dealerpoints: 0,
+					playername: _playerObj_2.name,
+					playerwins: 0,
+					playerpoints: 0,
+					bgani: 0,
+					ctrlpanel: 0,
+					_hands: {
+						k5_txt: "Five of a kind",
+						k4_txt: "Four of a kind",
+						fh_txt: "Full House", 
+						k3_txt: "Three of a kind", 
+						p2_txt: "Two pair", 
+						p1_txt: "One pair", 
+						hc_txt: "High card"
+					},
+					_comms: {
+						roll1txt: "First roll",
+						roll2txt: "Second roll",
+						rolltobeat: "Roll to beat:"
+					},
+					_autohold: {
+						nines: 0,
+						tens: 0,
+						jacks: 0,
+						queens: 0,
+						kings: 0,
+						aces: 0,
+						autoheld: 0
+					}
+				};
+
+let _roundObj = {
+					gid: _gameObj.gid,
+					rdNo: 1
+};
+
 
 let _dealerhand = {
 				gid: _gameObj.gid,
 				pid: _playerObj_1.pid,
-				rdNo: _gameObj.rdNo,
+				rdNo: _roundObj.rdNo,
 				pv: 0,
 				hc: 'default',
+				tm: 'default',
 				d1: 0,
 				d1_ico: _qm.f_ico,
 				d2: 0,
@@ -290,9 +290,10 @@ let _dealerhand = {
 let _playerhand = {
 				gid: _gameObj.gid,
 				pid: _playerObj_2.pid,
-				rdNo: _gameObj.rdNo,
+				rdNo: _roundObj.rdNo,
 				pv: 0,
 				hc: 'default',
+				tm: 'default',
 				d1: 0,
 				d1_ico: _qm.f_ico,
 				d2: 0,
@@ -305,10 +306,73 @@ let _playerhand = {
 				d5_ico: _qm.f_ico
 	};
 
+
+const _scoreBoardObj = {
+					gid: 1,	
+					rdNo: 1,
+					dtm: _dealerhand.tm,
+					dhc: _dealerhand.hc,
+					ptm: _playerhand.tm,
+					phc: _playerhand.hc,
+				};
+
+
+
+const _historyObj = {
+					gid: 1,
+					rdNo: 1,	
+					dealername: _gameObj.dealername,
+					dealerhand: _scoreBoardObj.dhc,
+					dealerpoints: _gameObj.dealerpoints,
+					playerhand: _gameObj.playername,
+					playerhand: _scoreBoardObj.phc,
+					playerpoints: _gameObj.playerpoints
+				};
+
+
+
+
+/*--- SCOREBOARD ---*/
+
+function scoreBoardDisplay(gid, pid, rd, pv, hc, tn, tm) {
+
+	// strip out first 2 chars i.e K5 five of a kind, HC high card
+	let hcode = hc.substr(0, 2);
+
+		if(pid == 1) {
+			_scoreBoardObj.dhc = hcode;
+		} else {
+			_scoreBoardObj.phc = hcode;
+		}
+
+	// strip out 4th to 7th chars i.e A_A aces, N_T nines tens
+	let hcode_hnd = hc.substr(3, 3);
+	console.log('card values: '  + hcode_hnd);
+
+};
+
+
+function resetScoreBoard(pid, rollNo) {
+//console.log('resetscoreboard pid: ' + pid + ' rollNo: ' + rollNo);
+
+	$('K5').innerHTML = _gameObj._hands.k5_txt; 
+	$('K4').innerHTML = _gameObj._hands.k4_txt; 
+	$('FH').innerHTML = _gameObj._hands.fh_txt; 
+	$('K3').innerHTML = _gameObj._hands.k3_txt; 
+	$('P2').innerHTML = _gameObj._hands.p2_txt; 
+	$('P1').innerHTML = _gameObj._hands.p1_txt; 
+	$('HC').innerHTML = _gameObj._hands.hc_txt; 
+
+
+};
+/*--- END SCOREBOARD ---*/
+
+
+
+
 /*--------------*/
 /*--- ARRAYS ---*/
 /*--------------*/
-
 let _roll = new Array(); 
 let _hold = new Array(); 
 let _rroll = new Array();  
@@ -438,7 +502,7 @@ let dNo = dObj['d_no'];
 		$(frmId).innerHTML = frmImgScr;
 		}
 
-/*-- IF SET TO 1 TURN OFF BG ANIMATION --*/
+/*-- SET TO 1 TO TURN OFF BG ANIMATION --*/
 if(_gameObj.bgani == 0) { genRndBg(); }
 
 setTimeout(function(){ diceAni(dObj, 60, 600, 10, rollNo); }, 1000);
@@ -574,10 +638,10 @@ function hold(strDobj) {
 function autoHold(pid, rollNo) {
 calcHeld();
 
-let dheld = _holdObj.autoheld;
+let dheld = _gameObj._autohold.autoheld;
 
 	if(dheld == 5){
-		console.log('ERROR: OCCASIONALLY freezes if all 5 held?');
+		console.log('ERROR: VERY OCCASIONALLY freezes if all 5 held? last 12.11.21');
 		hideDec1Cnvs();
 		for (j=1; j<=5; j++) {
 		var dObj = _hold[(j -1)];
@@ -710,20 +774,17 @@ if(aces >= 2){
 	};
 }; // end aces if
 
-
-_holdObj.nines = nines;
-_holdObj.tens = tens;
-_holdObj.jacks = jacks;
-_holdObj.queens = queens;
-_holdObj.kings = kings;
-_holdObj.aces = aces;
-_holdObj.autoheld = count;
+_gameObj._autohold.nines = nines;
+_gameObj._autohold.tens = tens;
+_gameObj._autohold.jacks = jacks;
+_gameObj._autohold.queens = queens;
+_gameObj._autohold.kings = kings;
+_gameObj._autohold.aces = aces;
+_gameObj._autohold.autoheld = count;
 
 
 };
-/*---------------------*/
-/*--- END CALC HELD ---*/
-/*---------------------*/
+
 
 /*----------------------*/
 /*--- CALCULATE ROLL ---*/
@@ -734,15 +795,23 @@ let _finalhand = _rroll.concat(_final);
 	if(pid == 1) {
 		_dealerhand = calculate( _finalhand[0], _finalhand[1], _finalhand[2], _finalhand[3], _finalhand[4], pid, 1, rd, rollNo); 
 		$('dlast').innerHTML =  _dealerhand.d1_ico + _dealerhand.d3_ico +  _dealerhand.d5_ico + _dealerhand.d4_ico + _dealerhand.d2_ico;
+		
+		display_roll( _dealerhand.gid, _dealerhand.pid, rd, _dealerhand.pv, _dealerhand.hc, 1, _dealerhand.tm);
+
+		//scoreBoardDisplay(_dealerhand.gid, _dealerhand.pid, rd, _dealerhand.pv, _dealerhand.hc, 1, _dealerhand.tm);
+
+
 	} else {
 		_playerhand = calculate( _finalhand[0], _finalhand[1], _finalhand[2], _finalhand[3], _finalhand[4], pid, 1, rd, rollNo); 
-		$('qlast').innerHTML =  _playerhand.d1_ico + _playerhand.d3_ico +  _playerhand.d5_ico + _playerhand.d4_ico + _playerhand.d2_ico;
+		$('plast').innerHTML =  _playerhand.d1_ico + _playerhand.d3_ico +  _playerhand.d5_ico + _playerhand.d4_ico + _playerhand.d2_ico;
+
+		display_roll( _playerhand.gid, _playerhand.pid, rd, _playerhand.pv, _playerhand.hc, 1, _playerhand.tm);
+
+		//scoreBoardDisplay(_playerhand.gid, _playerhand.pid, rd, _playerhand.pv, _playerhand.hc, 1, _playerhand.tm);
+
 	};
 	
 };
-/*--------------------------*/
-/*--- END CALCULATE ROLL ---*/
-/*--------------------------*/
 
 
 /*------------------------*/
@@ -782,219 +851,20 @@ function calcWinner() {
 function roundSummary(pid) {
 
 	if(pid == 1) {
-	$('winner_banner').innerHTML = "YOU ARE A LOSER";
+	$('winner_banner').innerHTML = "You lose, the answer to your question is NO";
 	} else {
-	$('winner_banner').innerHTML = "YOU ARE A WINNER";
+	$('winner_banner').innerHTML = "You win, the answer to your question is YES";
 	}
 
  $('dealer_final').innerHTML = _dealerhand.d1_ico + _dealerhand.d2_ico + _dealerhand.d3_ico + _dealerhand.d4_ico +_dealerhand.d5_ico;
  $('player_final').innerHTML = _playerhand.d1_ico + _playerhand.d2_ico + _playerhand.d3_ico + _playerhand.d4_ico +_playerhand.d5_ico;
 }
 
-/*-----------------*/
-/*--- VIBOMETER ---*/
-/*-----------------*/
 
-function rondVmCalc(posneg) {
-	
-	let dpv = _dealerhand.pv;
-	let ppv = _playerhand.pv;
-	let dealerwins = _gameObj.dealerwins;
-	let playerwins = _gameObj.playerwins;
-	let pv_total = (parseInt(dpv) + parseInt(ppv));
-	let dpc = ((parseInt(dpv) / parseInt(pv_total))*100); 
-	let ppc = ((parseInt(ppv) / parseInt(pv_total))*100);
-
-	let vneed = document.getElementById("vibneedle");
-
-	if(posneg == 'pos') {
-		marginpx = ppc - dpc;  
-		adjvpc = (parseInt(marginpx) / 2); // 50% to fit scale            
-		vneed.style.background = "#66ff33";
-		let pos = 0;
-		let id = setInterval(frame, 20);
-		function frame(){ 
-		if (pos == parseInt(adjvpc)) { clearInterval(id); }  else {  pos++; vneed.style.left = pos + "px"; } 
-		}
-	} else {
-		marginpx = dpc - ppc;              
-		adjvpc = (parseInt(marginpx) / 2); // 50% to fit scale
-		let neg_vpc = parseInt(adjvpc) - parseInt(marginpx); // set end position to negative value
-		vneed.style.background = "#ff0000";
-		let pos = 0;
-		let id = setInterval(frame, 20);
-		function frame(){	
-		if (pos == neg_vpc) { clearInterval(id); }  else {  pos--; vneed.style.left = pos + "px"; } }
-		}
-};
-
-/*-------------------------*/
-/*-- ROUND NUMBER SLIDER --*/
-/*-------------------------*/
-function rdslider(dws, qws, rd){
-	
-	$('rdNo').innerHTML = pad(rd, 2);
-
-    drdslider(dws, rd);
-    qrdslider(qws, rd);
-};
-
-function drdslider(ws, rd) {
-
-    var drdneed = $("drdneedle");
-
-    drdneed.innerHTML = ws;
-
-    var slider_width = 0;
-
-    switch(rd){
-    case 1: slider_width = 35; break;
-    case 2: slider_width = 25; break;
-    case 3: slider_width = 15; break;
-    case 4: slider_width = 14; break;
-    case 5: slider_width = 13; break;
-    case 6: slider_width = 12; break;
-    case 7: slider_width = 11; break;
-    case 8: slider_width = 10; break;
-	case 9: slider_width = 9; break;
-	case 10: slider_width = 8; break;
-	case 11: slider_width = 7; break;
-	case 12: slider_width = 6; break;
-	case 13: slider_width = 5; break;
-	default: slider_width = 5;
-    };
-    
-    var ws_slider = (parseInt(ws) * slider_width); 
-    
-    var pos = 0;
-    var id = setInterval(frame, 10);
-    function frame()
-    {
-    if (pos == ws_slider) { clearInterval(id); }  else {  pos++; drdneed.style.width = pos + "px"; } }
-};
-
-function qrdslider(ws, rd) {
-    var qrdneed = $("qrdneedle");
-    qrdneed.innerHTML = ws;
-    
-    var slider_width = 0;
-
-    switch(rd){
-    case 1: slider_width = 35; break;
-    case 2: slider_width = 25; break;
-    case 3: slider_width = 15; break;
-    case 4: slider_width = 14; break;
-    case 5: slider_width = 13; break;
-    case 6: slider_width = 12; break;
-    case 7: slider_width = 11; break;
-    case 8: slider_width = 10; break;
-	case 9: slider_width = 9; break;
-	case 10: slider_width = 8; break;
-	case 11: slider_width = 7; break;
-	case 12: slider_width = 6; break;
-	case 13: slider_width = 5; break;
-	default: slider_width = 5;
-    };
-    
-    var ws_slider = (parseInt(ws) * slider_width);
-
-    var pos = 0;
-    var id = setInterval(frame, 10);
-    function frame()
-    {
-    if (pos == ws_slider) { clearInterval(id); }  else {  pos++; qrdneed.style.width = pos + "px"; } }
-};
-
-
-
-
-
-
-
-/*--- 03.11.21 REDUNDANT SCOREBOARD NOT REQUIRED YET ---*/
-
-
-
-/*------------------------------THROW HISTORY ------------------------------*/
-
-function update_roll(pid, gid, tn, rd, pv, tm){
-    
-	var dpv = sessionStorage.getItem("dpv"); //dealer points value
-    var dtm = sessionStorage.getItem("dtm"); //dealer throw message
-    var qpv = sessionStorage.getItem("qpv"); //qu points value
-    var qtm = sessionStorage.getItem("qtm"); //qu throw message
-    var rd = sessionStorage.getItem("rd"); //round
-    var ws = sessionStorage.getItem("ws"); //wins?
-	var dws = sessionStorage.getItem("dws"); //de wins
-	var qws = sessionStorage.getItem("qws"); //qu wins
-    var dtot = sessionStorage.getItem("dtot"); //running tot points
-    var qtot = sessionStorage.getItem("qtot"); //running tot points 
-
-    var winbonus = 4; //=400 points
-	
-	//if (pid == 1){
-	//sessionStorage.setItem("pid", 2);
-	//sessionStorage.setItem("tn", 2);
-	//}
-	//else{
-	//sessionStorage.setItem("pid", 1);
-	//sessionStorage.setItem("tn", 1);
-	//sessionStorage.setItem("hc", "ND|A_A|10"); 
-	//rd++;
-	//sessionStorage.setItem("rd", rd);
-
-	//DICEMAN
-	//dtot = (parseInt(dtot) + parseInt(dpv_100));
-	//dtot = (parseInt(dtot) + parseInt(dpv));
-    //sessionStorage.setItem("dtot", dtot);
-
-	//record last throw de message
-    //sessionStorage.setItem("xdtm", dtm);
-	
-	//record last de dice 
-	//var xdd1 = sessionStorage.getItem("dd1");
-	//switch (parseInt(xdd1)){
-	//case 1: xdd1_i = i_nine_i; break;
-	//case 2: xdd1_i = i_ten_i; break;
-	//case 3: xdd1_i = i_jack_i; break;
-	//case 4: xdd1_i = i_queen_i; break;
-	//case 5: xdd1_i = i_king_i; break;
-	//case 6: xdd1_i = i_ace_i; break;
-	//};
-	//sessionStorage.setItem("xdd1_i", xdd1_i);
-	//sessionStorage.setItem("xdd1", xdd1);
-
-	//see dicedecide.js for xdd2 etc..
-	
-	//QUESTIONER
-	//qtot = (parseInt(qtot) + parseInt(qpv_100));
-	//qtot = (parseInt(qtot) + parseInt(qpv));
-    //sessionStorage.setItem("qtot", qtot);
-	//sessionStorage.setItem("xqtm", qtm);
-	
-	//var xqd1 = sessionStorage.getItem("qd1");
-	//switch (parseInt(xqd1)){
-	//case 1: xqd1_i = i_nine_i; break;
-	//case 2: xqd1_i = i_ten_i; break;
-	//case 3: xqd1_i = i_jack_i; break;
-	//case 4: xqd1_i = i_queen_i; break;
-	//case 5: xqd1_i = i_king_i; break;
-	//case 6: xqd1_i = i_ace_i; break;
-	//};
-	//sessionStorage.setItem("xqd1_i", xqd1_i);
-	//sessionStorage.setItem("xqd1", xqd1);
-	
-
-}; // end function
-
-
-
-
-
-
-//display_roll(gid, pid, rd, pv, hc, tn, tm);
 
 function display_roll(gid, pid, rd, pv, hc, tn, tm) {
+
+	//console.log('gid: ' + _dealerhand.gid + 'pid: ' +  _dealerhand.pid + ' rd: ' +  rd + ' pv: ' + _dealerhand.pv + ' hc: ' + _dealerhand.hc + ' tn - TURN REDUNDANT: 2, tm: ' +  _dealerhand.tm);
 
 	/*----SCORE BOARD------*/	  
 	var hc = hc + "|" + gid + "|" + pid + "|" + rd + "|" + tn;
@@ -1333,5 +1203,202 @@ function display_roll(gid, pid, rd, pv, hc, tn, tm) {
 
 	
 }; // end function
+
+/*-----------------*/
+/*--- VIBOMETER ---*/
+/*-----------------*/
+
+function rondVmCalc(posneg) {
+	
+	let dpv = _dealerhand.pv;
+	let ppv = _playerhand.pv;
+	let dealerwins = _gameObj.dealerwins;
+	let playerwins = _gameObj.playerwins;
+	let pv_total = (parseInt(dpv) + parseInt(ppv));
+	let dpc = ((parseInt(dpv) / parseInt(pv_total))*100); 
+	let ppc = ((parseInt(ppv) / parseInt(pv_total))*100);
+
+	let vneed = document.getElementById("vibneedle");
+
+	if(posneg == 'pos') {
+		marginpx = ppc - dpc;  
+		adjvpc = (parseInt(marginpx) / 2); // 50% to fit scale            
+		vneed.style.background = "#66ff33";
+		let pos = 0;
+		let id = setInterval(frame, 20);
+		function frame(){ 
+		if (pos == parseInt(adjvpc)) { clearInterval(id); }  else {  pos++; vneed.style.left = pos + "px"; } 
+		}
+	} else {
+		marginpx = dpc - ppc;              
+		adjvpc = (parseInt(marginpx) / 2); // 50% to fit scale
+		let neg_vpc = parseInt(adjvpc) - parseInt(marginpx); // set end position to negative value
+		vneed.style.background = "#ff0000";
+		let pos = 0;
+		let id = setInterval(frame, 20);
+		function frame(){	
+		if (pos == neg_vpc) { clearInterval(id); }  else {  pos--; vneed.style.left = pos + "px"; } }
+		}
+};
+
+/*-------------------------*/
+/*-- ROUND NUMBER SLIDER --*/
+/*-------------------------*/
+function rdslider(dws, qws, rd){
+	
+	$('rdNo').innerHTML = pad(rd, 2);
+
+    drdslider(dws, rd);
+    qrdslider(qws, rd);
+};
+
+function drdslider(ws, rd) {
+
+    var drdneed = $("drdneedle");
+
+    drdneed.innerHTML = ws;
+
+    var slider_width = 0;
+
+    switch(rd){
+    case 1: slider_width = 35; break;
+    case 2: slider_width = 25; break;
+    case 3: slider_width = 15; break;
+    case 4: slider_width = 14; break;
+    case 5: slider_width = 13; break;
+    case 6: slider_width = 12; break;
+    case 7: slider_width = 11; break;
+    case 8: slider_width = 10; break;
+	case 9: slider_width = 9; break;
+	case 10: slider_width = 8; break;
+	case 11: slider_width = 7; break;
+	case 12: slider_width = 6; break;
+	case 13: slider_width = 5; break;
+	default: slider_width = 5;
+    };
+    
+    var ws_slider = (parseInt(ws) * slider_width); 
+    
+    var pos = 0;
+    var id = setInterval(frame, 10);
+    function frame()
+    {
+    if (pos == ws_slider) { clearInterval(id); }  else {  pos++; drdneed.style.width = pos + "px"; } }
+};
+
+function qrdslider(ws, rd) {
+    var qrdneed = $("qrdneedle");
+    qrdneed.innerHTML = ws;
+    
+    var slider_width = 0;
+
+    switch(rd){
+    case 1: slider_width = 35; break;
+    case 2: slider_width = 25; break;
+    case 3: slider_width = 15; break;
+    case 4: slider_width = 14; break;
+    case 5: slider_width = 13; break;
+    case 6: slider_width = 12; break;
+    case 7: slider_width = 11; break;
+    case 8: slider_width = 10; break;
+	case 9: slider_width = 9; break;
+	case 10: slider_width = 8; break;
+	case 11: slider_width = 7; break;
+	case 12: slider_width = 6; break;
+	case 13: slider_width = 5; break;
+	default: slider_width = 5;
+    };
+    
+    var ws_slider = (parseInt(ws) * slider_width);
+
+    var pos = 0;
+    var id = setInterval(frame, 10);
+    function frame()
+    {
+    if (pos == ws_slider) { clearInterval(id); }  else {  pos++; qrdneed.style.width = pos + "px"; } }
+};
+
+
+
+
+
+
+
+/*--- 03.11.21 REDUNDANT SCOREBOARD NOT REQUIRED YET ---*/
+
+
+
+/*------------------------------THROW HISTORY ------------------------------*/
+
+function update_roll(pid, gid, tn, rd, pv, tm){
+    
+	var dpv = sessionStorage.getItem("dpv"); //dealer points value
+    var dtm = sessionStorage.getItem("dtm"); //dealer throw message
+    var qpv = sessionStorage.getItem("qpv"); //qu points value
+    var qtm = sessionStorage.getItem("qtm"); //qu throw message
+    var rd = sessionStorage.getItem("rd"); //round
+    var ws = sessionStorage.getItem("ws"); //wins?
+	var dws = sessionStorage.getItem("dws"); //de wins
+	var qws = sessionStorage.getItem("qws"); //qu wins
+    var dtot = sessionStorage.getItem("dtot"); //running tot points
+    var qtot = sessionStorage.getItem("qtot"); //running tot points 
+
+    var winbonus = 4; //=400 points
+	
+	//if (pid == 1){
+	//sessionStorage.setItem("pid", 2);
+	//sessionStorage.setItem("tn", 2);
+	//}
+	//else{
+	//sessionStorage.setItem("pid", 1);
+	//sessionStorage.setItem("tn", 1);
+	//sessionStorage.setItem("hc", "ND|A_A|10"); 
+	//rd++;
+	//sessionStorage.setItem("rd", rd);
+
+	//DICEMAN
+	//dtot = (parseInt(dtot) + parseInt(dpv_100));
+	//dtot = (parseInt(dtot) + parseInt(dpv));
+    //sessionStorage.setItem("dtot", dtot);
+
+	//record last throw de message
+    //sessionStorage.setItem("xdtm", dtm);
+	
+	//record last de dice 
+	//var xdd1 = sessionStorage.getItem("dd1");
+	//switch (parseInt(xdd1)){
+	//case 1: xdd1_i = i_nine_i; break;
+	//case 2: xdd1_i = i_ten_i; break;
+	//case 3: xdd1_i = i_jack_i; break;
+	//case 4: xdd1_i = i_queen_i; break;
+	//case 5: xdd1_i = i_king_i; break;
+	//case 6: xdd1_i = i_ace_i; break;
+	//};
+	//sessionStorage.setItem("xdd1_i", xdd1_i);
+	//sessionStorage.setItem("xdd1", xdd1);
+
+	//see dicedecide.js for xdd2 etc..
+	
+	//QUESTIONER
+	//qtot = (parseInt(qtot) + parseInt(qpv_100));
+	//qtot = (parseInt(qtot) + parseInt(qpv));
+    //sessionStorage.setItem("qtot", qtot);
+	//sessionStorage.setItem("xqtm", qtm);
+	
+	//var xqd1 = sessionStorage.getItem("qd1");
+	//switch (parseInt(xqd1)){
+	//case 1: xqd1_i = i_nine_i; break;
+	//case 2: xqd1_i = i_ten_i; break;
+	//case 3: xqd1_i = i_jack_i; break;
+	//case 4: xqd1_i = i_queen_i; break;
+	//case 5: xqd1_i = i_king_i; break;
+	//case 6: xqd1_i = i_ace_i; break;
+	//};
+	//sessionStorage.setItem("xqd1_i", xqd1_i);
+	//sessionStorage.setItem("xqd1", xqd1);
+	
+
+}; // end function
+
 
 

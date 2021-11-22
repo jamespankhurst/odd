@@ -1,19 +1,21 @@
-/*==============================*/
-/*===== ORION DICE DECIDE ======*/
-/* www.jamespankhurst.co.uk/odd */
-/* jamespankhurst180@gmail.com  */
-/* github.com/jamespankhurst    */
-/* gitlab.com/jamespankhurst180 */
-/*==============================*/
+/*==========================================*/
+/*========== ORION DICE DECIDE =============*/
+/* www.jamespankhurst.co.uk/odd1            */
+/* jamespankhurst180@gmail.com              */
+/* sample code: github.com/jamespankhurst   */
+/* repository: gitlab.com/jamespankhurst180 */
+/*==========================================*/
 
 /*----------------------------*/
 /*--- SET UP / START ROUND ---*/
 /*----------------------------*/
 function setUpGame(pName, strd) {
-	let rdNo = _gameObj.rdNo; 
-		_gameObj.rdNo++; 
+	let rdNo = _roundObj.rdNo; 
+		_roundObj.rdNo++; 
 	let dealerwins = _gameObj.dealerwins; 
 	let playerwins = _gameObj.playerwins;
+
+	hideScoreboardPanel();
 
 	if( strd == 1) {
 	$('ctrl-panel').style.display = "block";
@@ -42,19 +44,18 @@ xhttp.send();
 /*-----------------*/
 function diceRoll(pid, rollNo) {
 
+resetScoreBoard(pid, rollNo);
+
 	switch(pid) {
 		case 1:
-			$('comms-panel').innerHTML = _commsObj.roll1txt;
+			$('comms-panel').innerHTML = _gameObj._comms.roll1txt;
 		break;
 		case 2: 
 			let dtm = _dealerhand.tm;
 			let lastroll = _dealerhand.d1_ico + _dealerhand.d2_ico + _dealerhand.d3_ico + _dealerhand.d4_ico +_dealerhand.d5_ico;
-
-			//13Nov21
-			showButtonPanel();
-
-			$('comms-panel').innerHTML = _commsObj.rolltobeat + dtm + "<br />" + lastroll;
+			$('comms-panel').innerHTML = _gameObj._comms.rolltobeat + dtm + "<br />" + lastroll;
 			$('dscore').innerHTML = ""; 
+			showScoreboardPanel();
 		break;
 	} 
 
@@ -89,20 +90,25 @@ function diceRoll(pid, rollNo) {
 			setTimeout(function(){ showHoldCnvs(); }, 14000); 
 			setTimeout(function(){ autoHold(pid, rollNo); }, 15000);
 			} else {
-			showHoldPanel();
+			setTimeout(function(){ showHoldPanel(); }, 12000); 
+			setTimeout(function(){ showButtonPanel(); }, 12000); 
 			};
 		break;
 
 		case 2:
-			if(pid == 1){
-				$('comms-panel').innerHTML = _commsObj.roll2txt;
-			}
+
 			rmAllRoll1d();
 			showDec2Cnvs();
 			rmAllHeld();
 
 			$("hold_panel").innerHTML = "";
 
+			if(pid == 1){
+				$('comms-panel').innerHTML = _gameObj._comms.roll2txt;
+			} else {
+			hideHoldPanel();
+			}
+			
 			for (var x = 1; x <= 5; x++) {
 				let dNo;
 				switch (x){
@@ -151,7 +157,6 @@ function diceRoll(pid, rollNo) {
 function endRoll(pid, rollNo) {
 	calcRoll(pid, 1, rollNo);
 
-	
 	switch(pid) {
 		case 1: 
 			let dpv = _gameObj.dealerpoints;

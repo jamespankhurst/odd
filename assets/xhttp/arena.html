@@ -1,10 +1,11 @@
-<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-<!--      ORION DICE DECIDE       -->
-<!-- www.jamespankhurst.co.uk/odd -->
-<!-- jamespankhurst180@gmail.com  -->
-<!-- github.com/jamespankhurst    -->
-<!-- gitlab.com/jamespankhurst180 -->
-<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!--          ORION DICE DECIDE               -->
+<!-- www.jamespankhurst.co.uk/odd1            -->
+<!-- jamespankhurst180@gmail.com              -->
+<!-- sample code: github.com/jamespankhurst   -->
+<!-- repository: gitlab.com/jamespankhurst180 -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
 <div id="fx-con" class="flex-container">
 
   <div id="orion" class="w3-container" style="background-image: url('assets/img/or/or_0.png');">
@@ -26,9 +27,6 @@
     <div id="d3r2"></div>
     <div id="d4r2"></div>
     <div id="d5r2"></div>
-    
-    
-    
     
     <div id="or1_1" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
     <div id="or1_2" class="w3-container" style="background-image: url('assets/img/or/or_7_1.png');"></div>
@@ -142,7 +140,7 @@
     <canvas id="d5d1" width="60" height="100" draggable='true' ondragstart='drag(event)'></canvas>
 
     <div id='button_panel'>
-      <button id="secondrollbutton" class='end-button' onclick="diceRoll(2, 2)">ROLL</button>
+      <button id="secondrollbutton" class='start-button' onclick="diceRoll(2, 2)">roll...</button>
     </div>
 
   </div>
@@ -164,17 +162,16 @@
     <canvas id="d4d2" width="60" height="100"></canvas>
     <canvas id="d5d2" width="60" height="100"></canvas>
 
-     <div id="comms-panel" class="w3-container w3-center w3-text-white"></div>
+    <div id="comms-panel" class="w3-container w3-center w3-text-white"></div>
     <div id="dscore" class="w3-container w3-center w3-text-white"></div>
     <div id="pscore" class="w3-container w3-center w3-text-white"></div>
-    <div id='qlast'></div>
+    <div id='plast'></div>
     <div id='dlast'></div>
 
   </div>
   <!-- end comm_panel -->
 
-
-  <div id="hold_panel" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <div id="hold_panel" ondrop="drop(event)" ondragover="allowDrop(event)" style="background-image: url('assets/img/ho/hold_panel_bg.png');">
     <canvas id="d1h" width="50" height="100" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
     <canvas id="d2h" width="50" height="100" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
     <canvas id="d3h" width="50" height="100" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
@@ -184,20 +181,7 @@
 
   <!-- pyramid -->
   <div id="pyramid" class="w3-container" style="background-image: url('assets/img/py/py_0.png');">
-    
-    <div id="hand_panel">
-      <div class="hand_container">
-        <div id="K5">Five of a kind</div>
-        <div id="K4">Four of a kind</div>
-        <div id="FH">Full House</div>
-        <div id="K3">Three of a kind</div>
-        <div id="P2">Two Pair</div>
-        <div id="P1">One Pair</div>
-        <div id="HC">High Card</div>
-      </div>
-    </div>
-           
-   
+       
     <div id="py1_1" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
     <div id="py1_2" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
     <div id="py1_3" class="w3-container" style="background-image: url('assets/img/py/py_2.png');"></div>
