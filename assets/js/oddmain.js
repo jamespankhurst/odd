@@ -235,7 +235,7 @@ const _gameObj = {
 					playername: _playerObj_2.name,
 					playerwins: 0,
 					playerpoints: 0,
-					bgani: 0,
+					bgani: 1,
 					ctrlpanel: 0,
 					_hands: {
 						k5_txt: "Five of a kind",
@@ -247,6 +247,7 @@ const _gameObj = {
 						hc_txt: "High card"
 					},
 					_comms: {
+						openingtxt: "Someting you just can't decide? Toss a coin?..or play a game of poker dice..",
 						roll1txt: "First roll",
 						roll2txt: "Second roll",
 						rolltobeat: "Roll to beat:"
@@ -502,7 +503,7 @@ let dNo = dObj['d_no'];
 		$(frmId).innerHTML = frmImgScr;
 		}
 
-/*-- SET TO 1 TO TURN OFF BG ANIMATION --*/
+/*-- SET _gameObj.bgani TO 1 - TURN OFF BG ANIMATION --*/
 if(_gameObj.bgani == 0) { genRndBg(); }
 
 setTimeout(function(){ diceAni(dObj, 60, 600, 10, rollNo); }, 1000);

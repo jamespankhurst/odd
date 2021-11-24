@@ -1,10 +1,10 @@
-/*==============================*/
-/*===== ORION DICE DECIDE ======*/
-/* www.jamespankhurst.co.uk/odd */
-/* jamespankhurst180@gmail.com  */
-/* github.com/jamespankhurst    */
-/* gitlab.com/jamespankhurst180 */
-/*==============================*/
+/*==========================================*/
+/*========== ORION DICE DECIDE =============*/
+/* www.jamespankhurst.co.uk/odd1            */
+/* jamespankhurst180@gmail.com              */
+/* sample code: github.com/jamespankhurst   */
+/* repository: gitlab.com/jamespankhurst180 */
+/*==========================================*/
 
 /*-----------------------*/
 /*--- PRE-LOAD IMAGES ---*/

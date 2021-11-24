@@ -1,10 +1,10 @@
-/*==============================*/
-/*===== ORION DICE DECIDE ======*/
-/* www.jamespankhurst.co.uk/odd */
-/* jamespankhurst180@gmail.com  */
-/* github.com/jamespankhurst    */
-/* gitlab.com/jamespankhurst180 */
-/*==============================*/
+/*==========================================*/
+/*========== ORION DICE DECIDE =============*/
+/* www.jamespankhurst.co.uk/odd1            */
+/* jamespankhurst180@gmail.com              */
+/* sample code: github.com/jamespankhurst   */
+/* repository: gitlab.com/jamespankhurst180 */
+/*==========================================*/
 
 /*--- ANIMATE FUNCTIONS ---*/
 function bgAnimate(prx, frs, dur, spd) {
@@ -51,8 +51,6 @@ function i_pulse(frs, dur, spd) {
 	  setTimeout(function(){ bgAnimate("i_ho1_", frs, dur, spd); }, 1200);
 	  setTimeout(function(){ bgAnimate("i_py1_", frs, dur, spd); }, 1400);
 
-	  //setTimeout(function(){ reRoll(2, 1, 1, 1); }, 600);
-	  //setTimeout(function(){ restart(); }, 6600);
 };
 
 
@@ -78,9 +76,8 @@ function i_pulse(frs, dur, spd) {
 	$('loading_bar').style.display = "none";
 	//bg ani
     setTimeout(function(){ i_pulse(18, 22000, 99); }, 10);
-	//dice ? ani
+	//dice qm ani
     setTimeout(function(){ ani('f_', 120, 22000, 25); }, 1000);
-
     }
 
 	function ani(prx, frs, dur, spd) {
@@ -112,6 +109,8 @@ function i_pulse(frs, dur, spd) {
       var elem = document.getElementById(strlastFrame);
       elem.style.display = "block";
       elem.style.zIndex = "1";
+	  showOpeningText();
+	  $('opening_text').innerHTML = _gameObj._comms.openingtxt;
       showiButtonPanel();
     };
 
@@ -319,6 +318,25 @@ $('hold_panel').zIndex = "1";
 function hideHoldPanel() {
 $('hold_panel').style.display = "none";
 $('hold_panel').zIndex = "-1";	
+};
+
+function showOpeningText() {
+$('opening_text').style.display = "block";
+$('opening_text').zIndex = "1";	
+};
+function hideOpeningText() {
+$('opening_text').style.display = "none";
+$('opening_text').zIndex = "-1";	
+};
+
+function showScoreboardPanel() {
+$('scoreboard_panel').style.display = "block";
+$('scoreboard_panel').zIndex = "1";	
+};
+
+function hideScoreboardPanel() {
+$('scoreboard_panel').style.display = "none";
+$('scoreboard_panel').zIndex = "-1";	
 };
 
 function showasteriod2() {
