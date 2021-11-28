@@ -1,10 +1,10 @@
-/*==============================*/
-/*===== ORION DICE DECIDE ======*/
-/* www.jamespankhurst.co.uk/odd */
-/* jamespankhurst180@gmail.com  */
-/* github.com/jamespankhurst    */
-/* gitlab.com/jamespankhurst180 */
-/*==============================*/
+/*==========================================*/
+/*========== ORION DICE DECIDE =============*/
+/* www.jamespankhurst.co.uk/odd1            */
+/* jamespankhurst180@gmail.com              */
+/* sample code: github.com/jamespankhurst   */
+/* repository: gitlab.com/jamespankhurst180 */
+/*==========================================*/
 
 #loading_bar{
 	display: block; 
@@ -186,39 +186,81 @@ border: 0px solid green;
 	position: absolute; 
 	top: 260px; 
 	left: 45px; 
-	width: 300px; 
+	width: 320px; 
 	height: 100px; 
 	opacity: 1.0; 
 	padding: 10px; 
 	border: 0px solid pink; 
 	}
 
-
-
-#ctrl-panel { 
-	display: none; 
-	position: absolute; 
-	top: 410px; 
-	left: 0px; 
-	}
-
 #button_panel {
 	display: none; 
 	position: absolute; 
 	top: 320px; 
-	left: 140px; 
+	left: 40px; 
+	width: 320px; 
 }
+
+#opening_text {
+	display: block; 
+	position: absolute; 
+	top: 0px; 
+	left: 0px; 
+	zIndex: 1;
+}
+
+
 #i_button_panel {
 	display: none; 
 	position: absolute; 
-	top: 400px; 
-	left: 140px; 
+	top: 300px; 
+	left: 20px; 
 }
 
-#start-button { 
-	display: inline-block; 
-	position: relative; 
+#i_message {
+	display: block; 
+	position: absolute; 
+	top: 0px; 
+	left: 10px;
+}
+
+#startbutton { 
+	display: block; 
+	position: absolute; 
+	top: 50px; 
+	left: 40px;
 	}
+.start-button {
+padding-top: 0px;
+padding-bottom: 2px;
+padding-left: 5px;
+padding-right: 5px;
+font-size: 14px;
+line-height: 24px;
+font-style: italic;
+text-align: center;
+cursor: pointer;
+color: #fff;
+width: 260px;
+background-color: #000;
+border-right: 4px solid #666;
+border-top: 0px solid #000;
+border-left: 0px solid #fe000;
+box-shadow: 0 4px #999;
+zIndex: 1;
+}
+.start-button:hover {
+color: #fff;
+background-color: red;
+}
+.start-button:active {
+border-right: 2px solid #999;
+background-color: red;
+color: #fff;
+box-shadow: 0 4px #666;
+transform: translateY(2px);
+}
+
 #round-panel { 
 	display: inline-block; 
 	position: relative; 
@@ -277,34 +319,31 @@ border: 0px solid green;
 	position: absolute;
 	top: 150px; 
 	left: 120px; 
-	//width: 260px; 
-	//height: 40px; 
 }
-#qlast{
+#plast{
 	display: block; 
 	position: absolute;
 	top: 150px; 
 	left: 120px; 
-	//width: 260px; 
-	//height: 40px; 
 }
 
 /*------------------*/
-/*--- HAND-PANEL ---*/
+/*--- SCOREBOARD ---*/
 /*------------------*/
-#hand_panel { 
+
+#scoreboard_panel { 
 display: none; 
 position: absolute; 
 opacity: 1.0;
-top: 0px; 
-left: 0px; 
+top: 355px; 
+left: 280px; 
 }
 
-.hand_container {
+.scoreboard_container {
 display: grid;
 float: right;
 justify-content: start;
-align-content: right;
+align-content: left;
 grid-template-columns: auto;
 grid-column-gap: 0px;
 grid-template-rows: auto auto auto auto auto auto auto;
@@ -312,13 +351,13 @@ grid-rows-gap: 0px;
 padding-left: 0px;
 padding-top: 0px;
 color: #fff;
-max-width: 90px;
+max-width: 280px;
 border: 0px solid pink;
-margin-bottom: 20px;
+margin-bottom: 10px;
 }
-.hand_container > div {
+.scoreboard_container > div {
 text-align: left;
-font-size: 8px;
+font-size: 10px;
 color: #fff; 
 }
 #K5 { display: block; float: left; padding-right: 2px; color: #fff; }
@@ -329,9 +368,102 @@ color: #fff;
 #P1 { display: block; float: left; padding-right: 2px; color: #fff; }
 #HC { display: block; float: left; padding-right: 2px; color: #fff; }
 
-/*--------------------------*/
-/*--- END HAND-PANEL ---*/
-/*--------------------------*/
+/*---------------------*/
+/*--- CONTROL-PANEL ---*/
+/*---------------------*/
+
+#ctrl-panel { 
+	display: none; 
+	position: absolute; 
+	top: 430px; 
+	left: 0px; 
+	}
+
+.info-container{
+display: grid;
+justify-content: start;
+grid-template-columns: 60px 90px 100px auto;
+grid-template-rows: 32px;
+grid-rows-gap: 0px;
+grid-column-gap: 0px;
+padding: 8px;
+width: 290px;
+border: 0px outset #999;
+}
+
+.rd-container{
+display: inline-grid;
+justify-content: start;
+grid-template-columns: auto 10px auto; 
+grid-column-gap: 0px;
+padding-top: 0px;
+padding-bottom: 0px;
+padding-left: 0px;
+padding-right: 0px;
+/* background-color: lightgreen; */
+width: 298px;
+border: 0px dashed red;
+}
+#rdNotxt{
+display: inline;
+font-size: 12px;
+font-style: italic;
+padding: 2px;
+color: #fff;
+border: 0px dashed red
+}
+#rdNo{
+display: inline;
+text-align: left;
+font-size: 12px;
+padding: 2px;
+color: #fff;
+}
+
+#drdcontainer {
+height: 15px;
+/*background-color: #000;*/
+position: relative;
+}
+#drdneedle {
+font-size: 10px;
+line-height: 12px;
+color: #fff;
+text-align: right;
+width: 10px;
+max-width: 88px;
+height: 12px;
+padding: 0px;
+position: absolute;
+background-color: red;
+border: 0px solid #fff;
+}
+#qrdcontainer {
+height: 15px;
+/* background-color: #000; */
+border: 0px solid #000;
+position: relative;
+}
+#qrdneedle {
+font-size: 10px;
+line-height: 12px;
+color: #fff;
+text-align: right;
+width: 10px;
+max-width: 88px;
+height: 12px;
+padding: 0px;
+position: absolute;
+background-color: #3dc238;
+border: 0px solid #fff;
+}
+
+
+
+/*-------------------------*/
+/*--- END CONTROL-PANEL ---*/
+/*-------------------------*/
+
 
 /* ================================== */
 /* @@@ VIB-CONTAINERS @@@ */
@@ -536,94 +668,6 @@ border: 0px solid #fff;
 
 
 
-/* =============================================================================== */
-/* @@@ INFO-CONTAINER COLUMN 1.0: 'RD-CONTAINER' | COLUMN 2.0: 'VIB-CONTAINER' @@@ */
-/* =============================================================================== */
-.info-container{
-display: grid;
-justify-content: start;
-grid-template-columns: 60px 90px 100px auto;
-grid-template-rows: 32px;
-grid-rows-gap: 0px;
-grid-column-gap: 0px;
-padding: 8px;
-width: 360px;
-border: 4px outset #999;
-background-color: #000;
-}
-/* ======================================================== */
-/* @@@ 'RD-CONTAINER' @@@ */
-/* ======================================================== */  
-.rd-container{
-display: inline-grid;
-justify-content: start;
-grid-template-columns: auto 10px auto; 
-grid-column-gap: 0px;
-padding-top: 0px;
-padding-bottom: 0px;
-padding-left: 0px;
-padding-right: 0px;
-background-color: lightgreen;
-width: 298px;
-border: 0px dashed red;
-}
-#rdNotxt{
-display: inline;
-font-size: 12px;
-font-style: italic;
-padding: 2px;
-color: #fff;
-background-color: #000;
-border: 0px dashed red
-}
-#rdNo{
-display: inline;
-text-align: left;
-font-size: 12px;
-padding: 2px;
-color: #fff;
-background-color: darkblue;
-border: 1px solid #fff;
-}
-#drdcontainer {
-height: 15px;
-background-color: #000;
-position: relative;
-}
-#drdneedle {
-font-size: 10px;
-line-height: 12px;
-color: #fff;
-text-align: right;
-width: 10px;
-max-width: 88px;
-height: 12px;
-padding: 0px;
-position: absolute;
-background-color: red;
-border: 0px solid #fff;
-}
-#qrdcontainer {
-height: 15px;
-background-color: #000;
-border: 0px solid #000;
-position: relative;
-}
-#qrdneedle {
-font-size: 10px;
-line-height: 12px;
-color: #fff;
-text-align: right;
-width: 10px;
-max-width: 88px;
-height: 12px;
-padding: 0px;
-position: absolute;
-background-color: #3dc238;
-border: 0px solid #fff;
-}
-
-
 
 /* =============== */
 /* @@@ BUTTONS @@@ */
@@ -677,36 +721,7 @@ color: #fff;
 box-shadow: 0 4px #666;
 transform: translateY(2px);
 }
-.start-button {
-padding-top: 0px;
-padding-bottom: 2px;
-padding-left: 5px;
-padding-right: 5px;
-font-size: 8px;
-line-height: 10px;
-font-style: italic;
-text-align: right;
-cursor: pointer;
-color: #fff;
-width: 74px;
-background-color: #000;
-border-right: 4px solid #666;
-border-top: 0px solid #000;
-border-left: 0px solid #fe000;
-box-shadow: 0 4px #999;
-zIndex: 99;
-}
-.start-button:hover {
-color: #fff;
-background-color: red;
-}
-.start-button:active {
-border-right: 2px solid #999;
-background-color: red;
-color: #fff;
-box-shadow: 0 4px #666;
-transform: translateY(2px);
-}
+
 .end-button {
 padding-top: 0px;
 padding-bottom: 2px;
