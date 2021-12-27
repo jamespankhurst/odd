@@ -235,7 +235,7 @@ const _gameObj = {
 					playername: _playerObj_2.name,
 					playerwins: 0,
 					playerpoints: 0,
-					bgani: 1,
+					bgani: 0,
 					ctrlpanel: 0,
 					_hands: {
 						k5_txt: "Five of a kind",
@@ -247,7 +247,7 @@ const _gameObj = {
 						hc_txt: "High card"
 					},
 					_comms: {
-						openingtxt: "Someting you just can't decide? Toss a coin?..or play a game of poker dice..",
+						openingtxt: "Someting you just can't decide? Toss a coin?..or play a game of..",
 						roll1txt: "First roll",
 						roll2txt: "Second roll",
 						rolltobeat: "Roll to beat:"

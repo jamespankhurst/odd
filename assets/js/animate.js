@@ -110,7 +110,7 @@ function i_pulse(frs, dur, spd) {
       elem.style.display = "block";
       elem.style.zIndex = "1";
 	  showOpeningText();
-	  $('opening_text').innerHTML = _gameObj._comms.openingtxt;
+	  $('opening_txt').innerHTML = _gameObj._comms.openingtxt;
       showiButtonPanel();
     };
 
@@ -321,8 +321,8 @@ $('hold_panel').zIndex = "-1";
 };
 
 function showOpeningText() {
-$('opening_text').style.display = "block";
-$('opening_text').zIndex = "1";	
+$('opening_txt').style.display = "block";
+$('opening_txt').zIndex = "1";	
 };
 function hideOpeningText() {
 $('opening_text').style.display = "none";

@@ -201,13 +201,7 @@ border: 0px solid green;
 	width: 320px; 
 }
 
-#opening_text {
-	display: block; 
-	position: absolute; 
-	top: 0px; 
-	left: 0px; 
-	zIndex: 1;
-}
+
 
 
 #i_button_panel {
@@ -224,11 +218,20 @@ border: 0px solid green;
 	left: 10px;
 }
 
+#opening_txt {
+	display: block; 
+	position: absolute; 
+	top: 60px; 
+	left: 0px; 
+	width: 320px;
+}
+
 #startbutton { 
 	display: block; 
 	position: absolute; 
-	top: 50px; 
-	left: 40px;
+	top: 120px; 
+	left: 120px;
+	zIndex: 1;
 	}
 .start-button {
 padding-top: 0px;
@@ -239,9 +242,9 @@ font-size: 14px;
 line-height: 24px;
 font-style: italic;
 text-align: center;
-cursor: pointer;
+cursor: hand;
 color: #fff;
-width: 260px;
+width: 120px;
 background-color: #000;
 border-right: 4px solid #666;
 border-top: 0px solid #000;
